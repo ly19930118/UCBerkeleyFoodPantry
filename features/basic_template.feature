@@ -14,8 +14,8 @@ Feature: make sure the new layout of the website works correctly
 
   Scenario: go to resources page
     When I follow "Resources"
-    Then I be on the "Resources Page"
-    And I should see links to resources
+    Then I should be on the "Resources Page"
+    And I should see links to "Resources"
 
   Scenario: go to inventory page
     When I follow "Inventory"

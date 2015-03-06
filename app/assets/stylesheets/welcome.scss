@@ -1,3 +1,23 @@
 // Place all the styles related to the welcome controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.splash-page {
+	background-image: image-url("wheat.JPG");
+	-webkit-background-size: cover;
+	height: 100%;
+	width: 100%;
+    position:absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+}
+.splash-header {
+	text-align: center;
+	vertical-align: middle;
+	line-height: 300px;
+	color: #003A70;
+	font-size: 5.5em;
+	font-weight: 300;
+	font-family: "Raleway", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}

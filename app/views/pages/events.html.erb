@@ -1,9 +1,17 @@
-  <ul>
-    <li>Event 1</li>
-    <li>Event 2</li>
-    <li>Event 3</li>
-    <li>Event 4</li>
-    <li>Event 5</li>
-    <li>Event 6</li>
-    <li>Event 7</li>
-  </ul>
+<!-- <LINK href="//cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.3.0/fullcalendar.print.css" rel="stylesheet" type="text/css">
+<LINK href="//cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.3.0/fullcalendar.min.css" rel="stylesheet" type="text/css"> -->
+<%= javascript_include_tag "moment.js" %>
+<%= javascript_include_tag "fullcalendar.min.js" %>
+
+<div id='calendar'></div>
+<%= javascript_tag do %>
+	$(document).ready(function() {
+
+	    // page is now ready, initialize the calendar...
+
+	    $('#calendar').fullCalendar({
+	        // put your options and callbacks here
+	    })
+
+	});
+<% end %>

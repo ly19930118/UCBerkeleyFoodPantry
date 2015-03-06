@@ -1,4 +1,11 @@
 Rails.application.routes.draw do
+  #get 'pages/events'
+
+  #get 'pages/about'
+  get 'about', to: 'pages#about'
+  get 'events', to: 'pages#events'
+  get 'resources', to: 'pages#resources'
+  get 'inventory', to: 'pages#inventory'
   get 'welcome/index'
 
   # The priority is based upon order of creation: first created -> highest priority.

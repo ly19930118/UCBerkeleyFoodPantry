@@ -34,6 +34,9 @@ gem 'simple_form'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+# For rspec windows platform dev
+gem 'tzinfo-data', platforms: [:mingw, :mswin]
+
 group :development, :test do
   # Call 'debugger' anywhere in the code to stop execution and get a debugger console
   gem 'debugger'
@@ -45,5 +48,6 @@ group :development, :test do
   gem 'spring'
   gem 'database_cleaner'
   gem 'cucumber-rails', :require => false
+  gem 'rspec-rails', '~> 3.0'
 end
 

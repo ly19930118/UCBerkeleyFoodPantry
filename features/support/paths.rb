@@ -11,7 +11,13 @@ module NavigationHelpers
   # step definition in web_steps.rb
   #
   def path_to(page_name)
-
+  	case page_name
+	  	when /^the (UCBerkeleyFoodPantry )?home\s?page$/ then '/welcome/index'
+		when /^the "About Page"/ then '/about'
+		when /^the "Resources Page"/ then '/resources'
+		when /^the "Inventory Page"/ then '/inventory'
+		when /^the "Events Page"/ then '/events'
+	end
   end
 end
 

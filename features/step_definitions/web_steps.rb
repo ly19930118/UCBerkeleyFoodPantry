@@ -46,4 +46,4 @@ end
 
 Then /^I should see the page with link "(.*?)" to "(.*?)"$/ do |link, url|
   page.should have_link(link, :href => url)
-end
+end 

@@ -48,3 +48,19 @@ end
 Then /^I should see the page with link "(.*?)" to "(.*?)"$/ do |link, url|
   page.should have_link(link, :href => url)
 end
+
+Then /^I should( not)? see a field "([^"]*)"$/ do |negate, name|
+  expectation = negate ? :should_not : :should
+  begin
+    field = find_field(name)
+  rescue Capybara::ElementNotFound
+    # In Capybara 0.4+ #find_field raises an error instead of returning nil
+  end
+  field.send(expectation, be_present)
+end
+
+Then /^(?:|I )should see the element "([^"]*)"$/ do |ele|
+  if page.respond_to? :should
+    page.should have_css('div#' + ele)
+  end
+end

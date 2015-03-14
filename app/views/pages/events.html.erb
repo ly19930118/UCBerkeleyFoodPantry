@@ -9,7 +9,16 @@
 
 	    $('#calendar').fullCalendar({
 	        // put your options and callbacks here
-	    })
+
+	    });
+        var myEvent = {
+          title:"my new event",
+          allDay: true,
+          start: new Date(),
+          end: new Date()
+        };
+        $('#calendar').fullCalendar('renderEvent', myEvent)
+
 
 	});
 <% end %>

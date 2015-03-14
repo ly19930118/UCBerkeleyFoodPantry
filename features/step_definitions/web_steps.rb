@@ -30,4 +30,9 @@ Then(/^I should see an? "(.*?)" section$/) do |header|
   else
     assert page.has_content?(header)
   end
+
+Then /^I should (not )?see an element "([^"]*)"$/ do |negate, selector|
+  expectation = negate ? :should_not : :should
+  page.send(expectation, have_css(selector))
+>>>>>>> Stashed changes
 end

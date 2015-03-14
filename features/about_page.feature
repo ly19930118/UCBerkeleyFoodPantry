@@ -16,3 +16,14 @@ Feature: make sure there is an about page accessible from the nav bar
     And I should see a "Goals" section
     And I should see a "Location" section
     And I should see an "Hours" section
+
+  Scenario: the navbar should be up top still
+    When I follow "About"
+    Then I should see links to "Home"
+    And I should see links to "About"
+    And I should see links to "Resources"
+    And I should see links to "Events"
+    And I should see links to "Inventory"
+    And I should see links to "Partners"
+    And I should see links to "Contact"
+    And I should see links to "Help Us"

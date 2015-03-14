@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="16867985-4e42-4d18-a2ca-55a404c088dc" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/features/about_page.feature" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/features/admin_privileges.feature" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/features/basic_template.feature" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/features/step_definitions/web_steps.rb" afterPath="$PROJECT_DIR$/features/step_definitions/web_steps.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/features/about_page.feature" afterPath="$PROJECT_DIR$/features/about_page.feature" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="FoodPantry.iws" />
@@ -41,20 +38,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="about_page.feature" pinned="false" current-in-tab="false">
+      <file leaf-file-name="about_page.feature" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/features/about_page.feature">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="345">
-              <caret line="16" column="41" selection-start-line="16" selection-start-column="41" selection-end-line="16" selection-end-column="41" />
+            <state vertical-scroll-proportion="0.62091506" vertical-offset="0" max-vertical-offset="525">
+              <caret line="19" column="45" selection-start-line="19" selection-start-column="45" selection-end-line="19" selection-end-column="45" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="web_steps.rb" pinned="false" current-in-tab="true">
+      <file leaf-file-name="web_steps.rb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/features/step_definitions/web_steps.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.8039216" vertical-offset="111" max-vertical-offset="585">
+            <state vertical-scroll-proportion="0.0" vertical-offset="111" max-vertical-offset="585">
               <caret line="32" column="3" selection-start-line="32" selection-start-column="3" selection-end-line="32" selection-end-column="3" />
               <folding />
             </state>
@@ -72,8 +69,8 @@
         <option value="$PROJECT_DIR$/Gemfile" />
         <option value="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
         <option value="$PROJECT_DIR$/features/basic_template.feature" />
-        <option value="$PROJECT_DIR$/features/about_page.feature" />
         <option value="$PROJECT_DIR$/features/step_definitions/web_steps.rb" />
+        <option value="$PROJECT_DIR$/features/about_page.feature" />
       </list>
     </option>
   </component>
@@ -443,18 +440,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/features/about_page.feature">
+    <entry file="file://$PROJECT_DIR$/features/step_definitions/web_steps.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="345">
-          <caret line="16" column="41" selection-start-line="16" selection-start-column="41" selection-end-line="16" selection-end-column="41" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="111" max-vertical-offset="585">
+          <caret line="32" column="3" selection-start-line="32" selection-start-column="3" selection-end-line="32" selection-end-column="3" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/features/step_definitions/web_steps.rb">
+    <entry file="file://$PROJECT_DIR$/features/about_page.feature">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8039216" vertical-offset="111" max-vertical-offset="585">
-          <caret line="32" column="3" selection-start-line="32" selection-start-column="3" selection-end-line="32" selection-end-column="3" />
+        <state vertical-scroll-proportion="0.62091506" vertical-offset="0" max-vertical-offset="525">
+          <caret line="19" column="45" selection-start-line="19" selection-start-column="45" selection-end-line="19" selection-end-column="45" />
           <folding />
         </state>
       </provider>

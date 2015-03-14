@@ -11,5 +11,5 @@ Feature: make sure you can see the contact information on the page
   Scenario: see contact information
     When I follow "Contact"
     Then I should be on the "Contact Page"
-    And I should see the page "Email:" to "ucberkeleyfoodpantry@gmail.com"
-    And I should see the page "Facebook:"to "facebook.com/ucberkeleyfoodpantry"
+    And I should see the page with link "ucberkeleyfoodpantry@gmail.com" to "mailto:ucberkeleyfoodpantry@gmail.com"
+    And I should see the page with link "facebook.com/ucberkeleyfoodpantry" to "facebook.com/ucberkeleyfoodpantry"

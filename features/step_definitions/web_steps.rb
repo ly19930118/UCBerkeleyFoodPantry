@@ -1,5 +1,4 @@
 
-
 Given /^(?:|I )am on (.+)$/ do |page_name|
   visit path_to(page_name)
 end
@@ -22,5 +21,13 @@ Then /^(?:|I )should see links to "([^"]*)"$/ do |text|
     page.should have_content(text)
   else
     assert page.has_content?(text)
+  end
+end
+
+Then(/^I should see an? "(.*?)" section$/) do |header|
+  if page.respond_to? :should
+    page.should have_content(header)
+  else
+    assert page.has_content?(header)
   end
 end

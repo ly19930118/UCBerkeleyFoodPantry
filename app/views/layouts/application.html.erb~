@@ -27,7 +27,7 @@
         <li><a class='menu-item' href="/events">Events</a></li>
         <li><a class='menu-item' href="/inventory">Inventory</a></li>
         <li><a class='menu-item' href="#">Partners</a></li>
-        <li><a class='menu-item' href="/contact">Contact</a></li>
+        <li><a class='menu-item' href="#">Contact</a></li>
         <li><a class='menu-item' href="#">Help Us</a></li>
       </ul>
     </div><!-- /.navbar-collapse -->

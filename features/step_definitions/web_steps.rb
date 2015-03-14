@@ -34,5 +34,16 @@ Then(/^I should see an? "(.*?)" section$/) do |header|
 Then /^I should (not )?see an element "([^"]*)"$/ do |negate, selector|
   expectation = negate ? :should_not : :should
   page.send(expectation, have_css(selector))
->>>>>>> Stashed changes
+end
+
+Then /^(?:|I )should see "([^"]*)"$/ do |text|
+  if page.respond_to? :should
+    page.should have_content(text)
+  else
+    assert page.has_content?(text)
+  end
+end
+
+Then /^I should see the page with link "(.*?)" to "(.*?)"$/ do |link, url|
+  page.should have_link(link, :href => url)
 end

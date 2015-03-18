@@ -3,6 +3,7 @@ Rails.application.routes.draw do
 
   #get 'pages/about'
   get 'about', to: 'pages#about'
+  get 'login', to: 'pages#login'
   get 'events', to: 'pages#events'
   get 'resources', to: 'pages#resources'
   get 'inventory', to: 'pages#inventory'

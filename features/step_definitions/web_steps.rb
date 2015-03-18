@@ -84,3 +84,12 @@ When /^I fill in the (in)?correct admin key$/ do |incorrect|
     fill_in "admin_key", :with => "UCBERKELEYFOODPANTRY981723"
   end
 end
+
+When /^(?:|I )fill in "([^"]*)" with "([^"]*)"$/ do |field, value|
+  fill_in(field, :with => value)
+end
+
+When /^(?:|I )press "([^"]*)"$/ do |button|
+  click_button(button)
+end
+

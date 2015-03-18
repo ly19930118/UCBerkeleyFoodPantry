@@ -1,8 +1,8 @@
 Feature: Ability to create account as an admin
 
   As a member of UC Berkeley Food Pantry,
-  I want to able to create an account,
-  So that I can update information on the .
+  So that I can update information on the website,
+  I want to able to create an account.
 
   Background:
 

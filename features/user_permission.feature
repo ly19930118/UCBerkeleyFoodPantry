@@ -1,5 +1,7 @@
 Feature: User Permission should be properly handled
-  As a user, I should not be able to edit inventory, edit calendar events and edit hours So that I don't change the website's information.
+  As a user,
+  So that I don't change the website's information,
+  I should not be able to edit inventory, edit calendar events and edit hours
 
   Background:
 

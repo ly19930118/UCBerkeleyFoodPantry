@@ -74,3 +74,15 @@ end
 When /^I click the (.*?) button$/ do |button|
   click_button button
 end
+
+Then /^I should see "([^"]*)" button$/ do |button|
+  expect have_button button
+end
+
+Then /^I should not see "([^"]*)" button$/ do |button|
+  expect have_no_button button
+end
+
+Given /^I am logged in as user$/ do
+
+end

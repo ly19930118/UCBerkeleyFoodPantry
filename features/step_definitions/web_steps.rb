@@ -71,6 +71,16 @@ When /^I fill out the form with the following attributes:$/ do |table|
     fill_in field, :with => value
   end
 end
+
 When /^I click the (.*?) button$/ do |button|
   click_button button
+end
+
+
+When /^I fill in the (in)?correct admin key$/ do |incorrect|
+  if incorrect == "in"
+    fill_in "admin_key", :with => "INCORRECT"
+  else
+    fill_in "admin_key", :with => "UCBERKELEYFOODPANTRY981723"
+  end
 end

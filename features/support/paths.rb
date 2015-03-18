@@ -17,6 +17,7 @@ module NavigationHelpers
 		when /^the "Resources Page"/ then '/resources'
 		when /^the "Inventory Page"/ then '/inventory'
 		when /^the "Events Page"/ then '/events'
+    when /^the login page/ then '/login'
   		when /^the "Contact Page"/ then '/contact'
 	end
   end

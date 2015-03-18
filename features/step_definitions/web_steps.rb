@@ -71,15 +71,28 @@ When /^I fill out the form with the following attributes:$/ do |table|
     fill_in field, :with => value
   end
 end
+
 When /^I click the (.*?) button$/ do |button|
   click_button button
 end
 
-When /^(?:|I )fill in "([^"]*)" with "([^"]*)"$/ do |field, value|
-  fill_in(field, :with => value)
+Then /^I should see "([^"]*)" button$/ do |button|
+  expect have_button button
 end
 
-When /^(?:|I )press "([^"]*)"$/ do |button|
-  click_button(button)
+Then /^I should not see "([^"]*)" button$/ do |button|
+  expect have_no_button button
+end
+
+Given /^I am logged in as user$/ do
+
+end
+
+When /^I fill in the (in)?correct admin key$/ do |incorrect|
+  if incorrect == "in"
+    fill_in "admin_key", :with => "INCORRECT"
+  else
+    fill_in "admin_key", :with => "UCBERKELEYFOODPANTRY981723"
+  end
 end
 

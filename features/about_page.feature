@@ -14,8 +14,6 @@ Feature: make sure there is an about page accessible from the nav bar
     And I should see an "About Us" section
     And I should see a "Mission Statement" section
     And I should see a "Goals" section
-    And I should see a "Location" section
-    And I should see an "Hours" section
 
   Scenario: the navbar should be up top still
     When I follow "About"

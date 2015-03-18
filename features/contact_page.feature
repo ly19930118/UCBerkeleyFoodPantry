@@ -13,3 +13,5 @@ Feature: make sure you can see the contact information on the page
     Then I should be on the "Contact Page"
     And I should see the page with link "ucberkeleyfoodpantry@gmail.com" to "mailto:ucberkeleyfoodpantry@gmail.com"
     And I should see the page with link "facebook.com/ucberkeleyfoodpantry" to "http://facebook.com/ucberkeleyfoodpantry"
+    And I should see "Location: Stiles Hall at 2400 Bancroft Way"
+    And I should see "Hours for Spring 2015"

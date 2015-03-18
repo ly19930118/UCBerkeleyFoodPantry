@@ -37,52 +37,7 @@
   },
   "Cucumber Features": {
     "coverage": {
-      "/home/saasbook/Downloads/git/UCBerkeleyFoodPantry/app/controllers/welcome_controller.rb": [
-        1,
-        1,
-        null,
-        null
-      ],
-      "/home/saasbook/Downloads/git/UCBerkeleyFoodPantry/app/controllers/application_controller.rb": [
-        1,
-        null,
-        null,
-        1,
-        null
-      ],
-      "/home/saasbook/Downloads/git/UCBerkeleyFoodPantry/app/helpers/application_helper.rb": [
-        1,
-        null
-      ],
-      "/home/saasbook/Downloads/git/UCBerkeleyFoodPantry/app/helpers/pages_helper.rb": [
-        1,
-        null
-      ],
-      "/home/saasbook/Downloads/git/UCBerkeleyFoodPantry/app/helpers/welcome_helper.rb": [
-        1,
-        null
-      ],
-      "/home/saasbook/Downloads/git/UCBerkeleyFoodPantry/app/controllers/pages_controller.rb": [
-        1,
-        1,
-        null,
-        1,
-        null,
-        1,
-        null,
-        1,
-        null,
-        1,
-        null,
-        1,
-        null,
-        null
-      ],
-      "/home/saasbook/Downloads/git/UCBerkeleyFoodPantry/app/models/user.rb": [
-        1,
-        null
-      ]
     },
-    "timestamp": 1426650102
+    "timestamp": 1426651080
   }
 }

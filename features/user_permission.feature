@@ -11,10 +11,10 @@ Feature: User Permission should be properly handled
   
   Scenario: user should not see add new event on Calendar Page
   	Given I am on the Events page 
-  	Then I should not see the "Add New Event" button
+  	Then I should not see "Add New Event" button
 
   Scenario: user should not be able to edit hours on About page
   	Given I am on the About page
-  	Then I should not see the "Edit Hours" button
+  	Then I should not see "Edit Hours" button
 
 

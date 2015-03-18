@@ -1,68 +1,27 @@
 {
-  "RSpec": {
-    "coverage": {
-      "/home/saasbook/Downloads/git/UCBerkeleyFoodPantry/app/helpers/application_helper.rb": [
-        1,
-        null
-      ],
-      "/home/saasbook/Downloads/git/UCBerkeleyFoodPantry/app/helpers/pages_helper.rb": [
-        1,
-        null
-      ],
-      "/home/saasbook/Downloads/git/UCBerkeleyFoodPantry/app/helpers/welcome_helper.rb": [
-        1,
-        null
-      ],
-      "/home/saasbook/Downloads/git/UCBerkeleyFoodPantry/app/controllers/pages_controller.rb": [
-        1,
-        1,
-        null,
-        1,
-        null,
-        1,
-        null,
-        1,
-        null,
-        null
-      ],
-      "/home/saasbook/Downloads/git/UCBerkeleyFoodPantry/app/controllers/application_controller.rb": [
-        1,
-        null,
-        null,
-        1,
-        null
-      ]
-    },
-    "timestamp": 1426288986
-  },
   "Cucumber Features": {
     "coverage": {
+<<<<<<< Updated upstream
 <<<<<<< HEAD
     },
     "timestamp": 1426651080
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> Stashed changes
       "D:/School/Current/CS 169/proj/UCBerkeleyFoodPantry/app/controllers/welcome_controller.rb": [
-=======
-      "/home/saasbook/Downloads/git/UCBerkeleyFoodPantry/app/controllers/welcome_controller.rb": [
->>>>>>> 67cc583f4c6a44cd39fe921f1e69b93c8a8a9c52
         1,
         1,
         null,
         null
       ],
-<<<<<<< HEAD
       "D:/School/Current/CS 169/proj/UCBerkeleyFoodPantry/app/controllers/application_controller.rb": [
-=======
-      "/home/saasbook/Downloads/git/UCBerkeleyFoodPantry/app/controllers/application_controller.rb": [
->>>>>>> 67cc583f4c6a44cd39fe921f1e69b93c8a8a9c52
         1,
         null,
         null,
         1,
         null
       ],
-<<<<<<< HEAD
       "D:/School/Current/CS 169/proj/UCBerkeleyFoodPantry/app/helpers/application_helper.rb": [
         1,
         null
@@ -76,6 +35,7 @@
         null
       ]
     },
+<<<<<<< Updated upstream
     "timestamp": 1426649040
 =======
       "/home/saasbook/Downloads/git/UCBerkeleyFoodPantry/app/helpers/application_helper.rb": [
@@ -114,5 +74,8 @@
     "timestamp": 1426650102
 >>>>>>> 67cc583f4c6a44cd39fe921f1e69b93c8a8a9c52
 >>>>>>> 03394fec4a441ca29165a30013148f69a322e1f7
+=======
+    "timestamp": 1426651633
+>>>>>>> Stashed changes
   }
 }

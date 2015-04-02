@@ -34,6 +34,7 @@ gem 'simple_form'
 
 # For rspec windows platform dev
 gem 'tzinfo-data', platforms: [:mingw, :mswin]
+gem 'bcrypt', '3.1.7'
 
 group :development, :test do
   # Use sqlite3 as the database for Active Record

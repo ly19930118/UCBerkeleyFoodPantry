@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'users/new'
+
   #get 'pages/events'
 
   #get 'pages/about'
@@ -8,6 +10,7 @@ Rails.application.routes.draw do
   get 'resources', to: 'pages#resources'
   get 'inventory', to: 'pages#inventory'
   get 'contact', to: 'pages#contact'
+  get 'signup', to: 'users#new'
   get 'welcome/index'
 
   # The priority is based upon order of creation: first created -> highest priority.

@@ -2,9 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="16867985-4e42-4d18-a2ca-55a404c088dc" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/features/create_account_admin.feature" afterPath="$PROJECT_DIR$/features/create_account_admin.feature" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/features/create_account_user.feature" afterPath="$PROJECT_DIR$/features/create_account_user.feature" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/features/user_permission.feature" afterPath="$PROJECT_DIR$/features/user_permission.feature" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="FoodPantry.iws" />
@@ -39,8 +36,8 @@
       <file leaf-file-name="user_permission.feature" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/features/user_permission.feature">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.06535948" vertical-offset="0" max-vertical-offset="459">
-              <caret line="2" column="51" selection-start-line="2" selection-start-column="51" selection-end-line="2" selection-end-column="51" />
+            <state vertical-scroll-proportion="0.45751634" vertical-offset="0" max-vertical-offset="459">
+              <caret line="14" column="34" selection-start-line="14" selection-start-column="34" selection-end-line="14" selection-end-column="34" />
               <folding />
             </state>
           </provider>
@@ -618,8 +615,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/features/user_permission.feature">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.06535948" vertical-offset="0" max-vertical-offset="459">
-          <caret line="2" column="51" selection-start-line="2" selection-start-column="51" selection-end-line="2" selection-end-column="51" />
+        <state vertical-scroll-proportion="0.45751634" vertical-offset="0" max-vertical-offset="459">
+          <caret line="14" column="34" selection-start-line="14" selection-start-column="34" selection-end-line="14" selection-end-column="34" />
           <folding />
         </state>
       </provider>

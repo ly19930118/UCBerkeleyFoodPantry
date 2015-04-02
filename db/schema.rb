@@ -11,15 +11,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150318032436) do
+ActiveRecord::Schema.define(version: 20150402222453) do
 
   create_table "users", force: :cascade do |t|
     t.string   "userid"
     t.integer  "orders_this_month"
-    t.string   "password"
     t.boolean  "admin"
     t.datetime "created_at",        null: false
     t.datetime "updated_at",        null: false
+    t.string   "password_digest"
   end
 
 end

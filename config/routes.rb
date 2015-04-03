@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
   get 'users/new'
+  
+  post 'contact/edit', to: 'pages#contact_edit'
+  post 'contact/edit/update', to: 'pages#contact_update'
 
   #get 'pages/events'
 

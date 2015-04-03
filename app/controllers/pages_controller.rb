@@ -11,4 +11,6 @@ class PagesController < ApplicationController
   end
   def login
   end
+  def contact_edit
+  end
 end

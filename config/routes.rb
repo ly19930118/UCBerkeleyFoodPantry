@@ -2,6 +2,9 @@ Rails.application.routes.draw do
   resources :events
   get 'users/new'
 
+  post 'contact/edit', to: 'pages#contact_edit'
+  # match 'movies/:id/same_director' => 'movies#same_director', :as => :same_director, :via => [:get]
+
   #get 'pages/events'
 
   #get 'pages/about'

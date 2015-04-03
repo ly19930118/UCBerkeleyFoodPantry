@@ -1,0 +1,41 @@
+<%= javascript_include_tag "moment.js" %>
+<%= javascript_include_tag "fullcalendar.min.js" %>
+
+<div id='calendar'></div>
+<%= javascript_tag do %>
+    $(document).ready(function() {
+
+        // page is now ready, initialize the calendar...
+
+        $('#calendar').fullCalendar({
+            // put your options and callbacks here
+
+        });
+        var myEvent = {
+          title:"my new event",
+          allDay: true,
+          start: new Date(),
+          end: new Date()
+        };
+        $('#calendar').fullCalendar('renderEvent', myEvent)
+
+
+    });
+<% end %>
+
+<h3> Add New Event </h3>
+<%= form_for @event, url: {action: "create"}, html: {class: "nifty_form"} do |f| %>
+  <%= label_tag(:title, "Title: ") %>
+  <%= f.text_field :title %>
+  <br/>
+  <%= label_tag(:description, "Description: ") %>
+  <%= f.text_field :description %>
+  <br/>
+  <%= label_tag(:start_date, "Start: ") %>
+  <%= f.datetime_select :start_date, :default => { :hour => 23, :minute => 59 } %>
+  <br/>
+  <%= label_tag(:end_date, "End: ") %>
+  <%= f.datetime_select :end_date, :default => { :hour => 23, :minute => 59 } %>
+  <br/>
+  <%= f.submit "Create" %>
+<% end %>

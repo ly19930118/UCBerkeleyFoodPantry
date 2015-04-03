@@ -1,14 +1,14 @@
 Rails.application.routes.draw do
   get 'sessions/new'
+  
+  #contact page
+  get 'contact/index'
+  post 'contact/edit'
 
   resources :events
-  get 'users/new'
-  
-  post 'contact/edit', to: 'pages#contact_edit'
-  post 'contact/edit/update', to: 'pages#contact_update'
 
-  post 'contact/edit', to: 'pages#contact_edit'
-  # match 'movies/:id/same_director' => 'movies#same_director', :as => :same_director, :via => [:get]
+  resources :users
+  get 'users/new'
 
   #get 'pages/events'
 
@@ -18,7 +18,7 @@ Rails.application.routes.draw do
   get 'events', to: 'pages#events'
   get 'resources', to: 'pages#resources'
   get 'inventory', to: 'pages#inventory'
-  get 'contact', to: 'pages#contact'
+  get 'contact', to: 'contact#index'
   get 'signup', to: 'users#new'
   get 'welcome/index'
 
@@ -27,7 +27,6 @@ Rails.application.routes.draw do
 
   # You can have the root of your site routed with "root"
   root 'welcome#index'
-  resources :users
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

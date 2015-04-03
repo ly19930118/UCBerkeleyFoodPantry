@@ -28,7 +28,11 @@
         <li><a class='menu-item' href="/inventory">Inventory</a></li>
         <li><a class='menu-item' href="#">Partners</a></li>
         <li><a class='menu-item' href="/contact">Contact</a></li>
-        <li><a class='menu-item' href="/signup">Sign Up</a></li>
+        <% if logged_in? %>
+            <li><a class='menu-item' href="/login">Logout</a></li>
+        <% else %>
+            <li><a class='menu-item' href="/login">Login</a></li>
+        <% end %>
         <li><a class='menu-item' href="#">Help Us</a></li>
       </ul>
     </div><!-- /.navbar-collapse -->

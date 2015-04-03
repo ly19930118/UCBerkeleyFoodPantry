@@ -1,5 +1,4 @@
-<%= javascript_include_tag "moment.js" %>
-<%= javascript_include_tag "fullcalendar.min.js" %>
+
 
 <div id='calendar'></div>
 <%= javascript_tag do %>
@@ -8,16 +7,23 @@
         // page is now ready, initialize the calendar...
 
         $('#calendar').fullCalendar({
-            // put your options and callbacks here
+            header: {
+              left: 'prev,next today',
+              center: 'title',
+              right: 'month,agendaWeek,agendaDay'
+            },
+            defaultView: 'month'
 
         });
-        var myEvent = {
-          title:"my new event",
-          allDay: true,
-          start: new Date(),
-          end: new Date()
-        };
-        $('#calendar').fullCalendar('renderEvent', myEvent)
+        <% @events.each do |eve| %>
+          var myEvent = {
+            title:"<%= eve.title %>",
+            allDay: true,
+            start: new Date(<%= eve.getStart %>),
+            end: new Date(<%= eve.getEnd %>)
+          };
+          $('#calendar').fullCalendar('renderEvent', myEvent)
+        <% end %>
 
 
     });
@@ -32,10 +38,10 @@
   <%= f.text_field :description %>
   <br/>
   <%= label_tag(:start_date, "Start: ") %>
-  <%= f.datetime_select :start_date, :default => { :hour => 23, :minute => 59 } %>
+  <%= f.datetime_select :start_date, :default => { :hour => 23, :minute => 59 }, :minute_step => 30 %>
   <br/>
   <%= label_tag(:end_date, "End: ") %>
-  <%= f.datetime_select :end_date, :default => { :hour => 23, :minute => 59 } %>
+  <%= f.datetime_select :end_date, :default => { :hour => 23, :minute => 59 }, :minute_step => 30 %>
   <br/>
   <%= f.submit "Create" %>
 <% end %>

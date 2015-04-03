@@ -29,19 +29,21 @@
     });
 <% end %>
 
-<h3> Add New Event </h3>
+
 <%= form_for @event, url: {action: "create"}, html: {class: "nifty_form"} do |f| %>
-  <%= label_tag(:title, "Title: ") %>
-  <%= f.text_field :title %>
-  <br/>
-  <%= label_tag(:description, "Description: ") %>
-  <%= f.text_field :description %>
-  <br/>
-  <%= label_tag(:start_date, "Start: ") %>
-  <%= f.datetime_select :start_date, :default => { :hour => 23, :minute => 59 }, :minute_step => 30 %>
-  <br/>
-  <%= label_tag(:end_date, "End: ") %>
-  <%= f.datetime_select :end_date, :default => { :hour => 23, :minute => 59 }, :minute_step => 30 %>
-  <br/>
-  <%= f.submit "Create" %>
+  <fieldset>
+    <legend>Add New Event</legend>
+    <p><%= label_tag(:title, "Title: ", class: "field") %>
+    <%= f.text_field :title %></p>
+
+    <p><%= label_tag(:description, "Description: ", class: "field") %>
+    <%= f.text_field :description %></p>
+
+    <p><%= label_tag(:start_date, "Start: ", class: "field") %>
+    <%= f.datetime_select :start_date, :default => { :hour => 23, :minute => 59 }, :minute_step => 30 %></p>
+
+    <p><%= label_tag(:end_date, "End: ", class: "field") %>
+    <%= f.datetime_select :end_date, :default => { :hour => 23, :minute => 59 }, :minute_step => 30 %></p>
+    <%= f.submit "Create" %>
+  </fieldset>
 <% end %>

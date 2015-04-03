@@ -13,12 +13,4 @@
 	    <li>Friday: 10 am - 12 pm </li>
 	  </ul>
 
-<<<<<<< HEAD
-
-<%= button_to "edit", action: "contact_edit" %>
-
-
-
-=======
-<%= button_to "Edit Contact Info", action: "contact_edit" %>
->>>>>>> 6a9ac878c05f240df369d5573cd04b5f289d24f5
+<%= button_to "Edit Contact Info". action: "contact_edit" %>

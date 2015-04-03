@@ -9,9 +9,9 @@ Background: The new tabs template has been set up
   Given I am on the "Contact Page"
 
   Scenario: as an admin, be able to edit hours
-    I should see "Edit Contact Information"
+    Then I should see "Edit Contact Information"
     When I follow "Edit Contact Information"
-    I should be on the "Edit Contacts Page"
+    Then I should be on the "Edit Contacts Page"
     When I fill in "Email" with "new email"
     And I fill in "Facebook" with "new facebook"
     And I fill in "Location" with "new location"

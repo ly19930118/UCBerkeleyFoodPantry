@@ -12,7 +12,7 @@ Background: The new tabs template has been set up
 
   Scenario: as an admin, be able to see and create events
     Given I am on the Events Page
-    I should see "Create Event"
+    Then I should see "Create Event"
     When I fill in "Title of Event" with "title"
     And I fill in "Date" with "date"
     And I fill in "Description" with "description"
@@ -26,7 +26,7 @@ Background: The new tabs template has been set up
   Scenario: edit an event
     Given I am on the Events Page
     When I follow "Test Event"
-    I should be on the Information Page for "Test Event"
+    Then I should be on the Information Page for "Test Event"
     And I should see "Edit Event"
     When I fill in "Title of Event" with "new title"
     And I fill in "Date" with "new date"

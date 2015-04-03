@@ -1,19 +1,24 @@
 {
   "Cucumber Features": {
     "coverage": {
+<<<<<<< HEAD
       "D:/School/Current/CS 169/proj/UCBerkeleyFoodPantry/app/controllers/welcome_controller.rb": [
+=======
+      "/home/saasbook/Downloads/git/UCBerkeleyFoodPantry/app/controllers/welcome_controller.rb": [
+>>>>>>> 5077316da8e774b393dfe5c6d78f3d7365f22cbf
         1,
         1,
         null,
         null
       ],
-      "D:/School/Current/CS 169/proj/UCBerkeleyFoodPantry/app/controllers/application_controller.rb": [
+      "/home/saasbook/Downloads/git/UCBerkeleyFoodPantry/app/controllers/application_controller.rb": [
         1,
         null,
         null,
         1,
         null
       ],
+<<<<<<< HEAD
       "D:/School/Current/CS 169/proj/UCBerkeleyFoodPantry/app/helpers/application_helper.rb": [
         1,
         null
@@ -23,10 +28,45 @@
         null
       ],
       "D:/School/Current/CS 169/proj/UCBerkeleyFoodPantry/app/helpers/welcome_helper.rb": [
+=======
+      "/home/saasbook/Downloads/git/UCBerkeleyFoodPantry/app/helpers/application_helper.rb": [
+        1,
+        null
+      ],
+      "/home/saasbook/Downloads/git/UCBerkeleyFoodPantry/app/helpers/pages_helper.rb": [
+        1,
+        null
+      ],
+      "/home/saasbook/Downloads/git/UCBerkeleyFoodPantry/app/helpers/welcome_helper.rb": [
+        1,
+        null
+      ],
+      "/home/saasbook/Downloads/git/UCBerkeleyFoodPantry/app/controllers/pages_controller.rb": [
+        1,
+        1,
+        null,
+        1,
+        null,
+        1,
+        null,
+        1,
+        null,
+        1,
+        null,
+        1,
+        null,
+        null
+      ],
+      "/home/saasbook/Downloads/git/UCBerkeleyFoodPantry/app/models/user.rb": [
+>>>>>>> 5077316da8e774b393dfe5c6d78f3d7365f22cbf
         1,
         null
       ]
     },
+<<<<<<< HEAD
     "timestamp": 1426651786
+=======
+    "timestamp": 1426651110
+>>>>>>> 5077316da8e774b393dfe5c6d78f3d7365f22cbf
   }
 }

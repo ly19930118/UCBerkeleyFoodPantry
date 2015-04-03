@@ -1,8 +1,8 @@
 Feature: Ability to create account as a user
 
   As a UC Berkeley Food Pantry user,
-  I want to able to create an account,
-  So that I can begin placing orders for food.
+  So that I can begin placing orders for food,
+  I want to able to create an account.
 
   Background:
 

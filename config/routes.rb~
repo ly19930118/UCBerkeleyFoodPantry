@@ -1,11 +1,19 @@
 Rails.application.routes.draw do
+  get 'users/new'
+  
+  post 'contact/edit'
+  post 'contact/edit/update', to: 'pages#contact_update'
+
   #get 'pages/events'
 
   #get 'pages/about'
   get 'about', to: 'pages#about'
+  get 'login', to: 'pages#login'
   get 'events', to: 'pages#events'
   get 'resources', to: 'pages#resources'
   get 'inventory', to: 'pages#inventory'
+  get 'contact', to: 'pages#contact'
+  get 'signup', to: 'users#new'
   get 'welcome/index'
 
   # The priority is based upon order of creation: first created -> highest priority.

@@ -7,4 +7,12 @@ class PagesController < ApplicationController
   end
   def resources
   end
+  def contact
+  end
+  def login
+  end
+  def contact_edit
+  end
+  def contact_update
+  end
 end

@@ -14,7 +14,7 @@ class UsersController < ApplicationController
       # Handle a successful save.
       log_in @user
       flash[:success] = "Account Successfully created!"
-      redirect_to '/about'
+      redirect_to root_path
     else
       render 'new'
     end
@@ -23,7 +23,7 @@ class UsersController < ApplicationController
   private
 
   def user_params
-    params.require(:user).permit(:name, :email, :password,
+    params.require(:user).permit(:userid, :password,
                                  :password_confirmation)
   end
 end

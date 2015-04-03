@@ -15,12 +15,13 @@ Rails.application.routes.draw do
 
   #get 'pages/about'
   get 'about', to: 'pages#about'
-  get 'login', to: 'pages#login'
   get 'events', to: 'pages#events'
   get 'resources', to: 'pages#resources'
   get 'inventory', to: 'pages#inventory'
   get 'contact', to: 'contact#index'
   get 'signup', to: 'users#new'
+  get 'login', to: 'sessions#new'
+  post 'login', to: 'sessions#create'
   get 'welcome/index'
 
   # The priority is based upon order of creation: first created -> highest priority.

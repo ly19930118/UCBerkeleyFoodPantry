@@ -2,8 +2,8 @@
 <h2>Contact Us!</h2>
 	
 	  <ul>
-	    <li>Email: <a href="mailto:<%= @contact.email %>">Send Us An Email!</a></li>
-	    <li>Facebook: <a href="<%= @contact.facebook%>">Facebook Link</a></li>
+	    <li>Email: <a href="mailto:#{@contact.email}">Send Us An Email!</a></li>
+	    <li>Facebook: <a href="#{@contact.facebook}">Facebook Link</a></li>
 	  </ul>
 <h3>Location: Stiles Hall at 2400 Bancroft Way</h3>
 <br>

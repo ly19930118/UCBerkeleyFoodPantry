@@ -4,7 +4,6 @@ Rails.application.routes.draw do
   #contact page
   get 'contact/index'
   post 'contact/edit'
-  put 'contact/update'
 
   resources :events
 

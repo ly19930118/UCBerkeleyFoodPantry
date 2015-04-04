@@ -1,6 +1,6 @@
 <h2>Edit Contact Page</h2>
 
-<%= form_tag contact_update_path, :method => :put do %>
+<%= form_tag contact_path, :method => :put do %>
 	<%= label :contact, :email, 'email: ' %>
 	<%= text_field :contact, 'email' %>
 

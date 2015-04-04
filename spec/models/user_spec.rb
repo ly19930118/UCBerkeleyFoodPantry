@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe User, type: :model do
   require 'rails_helper'
 
-  RSpec.describe "users/new.html.erb", type: :view do
+  describe "users/new.html.erb", type: :view do
 
     describe 'being able to login as an admin or a regular user' do
 

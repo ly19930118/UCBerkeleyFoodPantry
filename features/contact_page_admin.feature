@@ -21,7 +21,7 @@ Background: The new tabs template has been set up
     And I fill in "hours" with "new hours"
     And I click the "Update Contact Info" button
     Then I should be on the "Contact Page"
-    And I should see "new email"
-    And I should see "new facebook"
+    And I should see the page with link "Send Us An Email!" to "mailto:new email"
+    And I should see the page with link "Facebook Link" to "new facebook"
     And I should see "new location"
     And I should see "new hours"

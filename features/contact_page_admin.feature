@@ -6,17 +6,20 @@ Feature: admins should have the ability to edit contact information
 
 Background: The new tabs template has been set up
 
-  Given I am on the "Contact Page"
+  Given the following contact page exists:
+  | email          | facebook          | location |hours         |
+  | food@gmail.com | facebook.com/food | Berkeley | Mondays: 3PM |
 
   Scenario: as an admin, be able to edit hours
-    Then I should see "Edit Contact Information"
-    When I follow "Edit Contact Information"
-    Then I should be on the "Edit Contacts Page"
-    When I fill in "Email" with "new email"
-    And I fill in "Facebook" with "new facebook"
-    And I fill in "Location" with "new location"
-    And I fill in "Hours" with "new hours"
-    And I press "Update"
+    Given I am on the "Contact Page"
+    Then I should see "Edit Contact Info" button
+    When I click the "Edit Contact Info" button
+    Then I should be on the "Edit Contact Page"
+    When I fill in "email" with "new email"
+    And I fill in "facebook" with "new facebook"
+    And I fill in "location" with "new location"
+    And I fill in "hours" with "new hours"
+    And I click the "Update Contact Info" button
     Then I should be on the "Contact Page"
     And I should see "new email"
     And I should see "new facebook"

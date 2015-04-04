@@ -14,13 +14,13 @@ RSpec.describe User, type: :model do
 
       # rest of this still needs to be edited, only the descriptions (.e.g it ... do are somewhat done)
 
-      it 'should login an admin correctly' do
-        User.should_receive(:find_by_userid).with('anne').and_return(@admin)
-      end
+      #it 'should login an admin correctly' do
+      #  User.should_receive(:find_by_userid).with('anne').and_return(@admin)
+      #end
 
-      it 'should login a user correctly' do
-        User.should_receive(:find_by_userid).with('taylor').and_return(@user)
-      end
+      #it 'should login a user correctly' do
+      #  User.should_receive(:find_by_userid).with('taylor').and_return(@user)
+      #end
 
     end
 

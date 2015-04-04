@@ -1,0 +1,34 @@
+// Place all the styles related to the Events controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+fieldset {
+    width: 500px;
+}
+
+legend {
+    font-size: 20px;
+}
+
+label.field {
+    text-align: left;
+    width: 100px;
+    float: left;
+    font-weight: bold;
+}
+
+input.textbox {
+    width: 300px;
+    float: left;
+}
+
+fieldset p {
+    clear: both;
+    padding: 5px;
+}
+
+
+
+.nifty_form {
+    padding: 30px;
+}

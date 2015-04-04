@@ -11,5 +11,4 @@ Feature: events page is properly defined
   Scenario: go to events page
     When I follow "Events"
     Then I should be on the "Events Page"
-    Then I should see "my new event"
     Then I should see the element "calendar"

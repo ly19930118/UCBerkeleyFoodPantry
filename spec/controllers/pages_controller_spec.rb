@@ -11,13 +11,6 @@ RSpec.describe PagesController do
             expect(response.body).to match /About Us/im
         end
     end
-    describe "GET events" do
-        it "renders the events template" do
-            get :events
-            expect(response).to render_template("events")
-            expect(response.body).to match /calendar/im
-        end
-    end
     describe "GET inventory" do
         it "renders the inventory template" do
             get :inventory

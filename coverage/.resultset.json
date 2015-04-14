@@ -148,13 +148,13 @@
   },
   "Cucumber Features": {
     "coverage": {
-      "/Users/Unzi/foodpantry/UCBerkeleyFoodPantry/app/controllers/welcome_controller.rb": [
+      "/home/saasbook/Documents/foodpantry/UCBerkeleyFoodPantry/app/controllers/welcome_controller.rb": [
         1,
         1,
         null,
         null
       ],
-      "/Users/Unzi/foodpantry/UCBerkeleyFoodPantry/app/controllers/application_controller.rb": [
+      "/home/saasbook/Documents/foodpantry/UCBerkeleyFoodPantry/app/controllers/application_controller.rb": [
         1,
         null,
         null,
@@ -162,69 +162,53 @@
         1,
         null
       ],
-      "/Users/Unzi/foodpantry/UCBerkeleyFoodPantry/app/helpers/application_helper.rb": [
+      "/home/saasbook/Documents/foodpantry/UCBerkeleyFoodPantry/app/helpers/application_helper.rb": [
         1,
         null
       ],
-      "/Users/Unzi/foodpantry/UCBerkeleyFoodPantry/app/helpers/contact_helper.rb": [
+      "/home/saasbook/Documents/foodpantry/UCBerkeleyFoodPantry/app/helpers/contact_helper.rb": [
         1,
         null
       ],
-      "/Users/Unzi/foodpantry/UCBerkeleyFoodPantry/app/helpers/pages_helper.rb": [
+      "/home/saasbook/Documents/foodpantry/UCBerkeleyFoodPantry/app/helpers/pages_helper.rb": [
         1,
         null
       ],
-      "/Users/Unzi/foodpantry/UCBerkeleyFoodPantry/app/helpers/sessions_helper.rb": [
+      "/home/saasbook/Documents/foodpantry/UCBerkeleyFoodPantry/app/helpers/sessions_helper.rb": [
         1,
         1,
         0,
         null,
         1,
-        29,
+        28,
         null,
         1,
-        29,
-        null,
-        null
-      ],
-      "/Users/Unzi/foodpantry/UCBerkeleyFoodPantry/app/helpers/users_helper.rb": [
-        1,
-        null
-      ],
-      "/Users/Unzi/foodpantry/UCBerkeleyFoodPantry/app/helpers/welcome_helper.rb": [
-        1,
-        null
-      ],
-      "/Users/Unzi/foodpantry/UCBerkeleyFoodPantry/app/models/user.rb": [
-        1,
-        1,
-        1,
-        1,
-        1,
+        28,
         null,
         null
       ],
-      "/Users/Unzi/foodpantry/UCBerkeleyFoodPantry/app/controllers/pages_controller.rb": [
+      "/home/saasbook/Documents/foodpantry/UCBerkeleyFoodPantry/app/helpers/users_helper.rb": [
+        1,
+        null
+      ],
+      "/home/saasbook/Documents/foodpantry/UCBerkeleyFoodPantry/app/helpers/welcome_helper.rb": [
+        1,
+        null
+      ],
+      "/home/saasbook/Documents/foodpantry/UCBerkeleyFoodPantry/app/models/user.rb": [
         1,
         1,
-        null,
         1,
-        null,
         1,
-        null,
-        1,
-        null,
-        1,
-        null,
         1,
         null,
         null
       ],
-      "/Users/Unzi/foodpantry/UCBerkeleyFoodPantry/app/models/contact.rb": [
+      "/home/saasbook/Documents/foodpantry/UCBerkeleyFoodPantry/app/models/contact.rb": [
         1,
         null
       ],
-      "/Users/Unzi/foodpantry/UCBerkeleyFoodPantry/app/controllers/contact_controller.rb": [
+      "/home/saasbook/Documents/foodpantry/UCBerkeleyFoodPantry/app/controllers/contact_controller.rb": [
         1,
         null,
         1,
@@ -244,7 +228,7 @@
         null,
         null
       ],
-      "/Users/Unzi/foodpantry/UCBerkeleyFoodPantry/app/controllers/events_controller.rb": [
+      "/home/saasbook/Documents/foodpantry/UCBerkeleyFoodPantry/app/controllers/events_controller.rb": [
         null,
         1,
         1,
@@ -286,7 +270,7 @@
         null,
         null
       ],
-      "/Users/Unzi/foodpantry/UCBerkeleyFoodPantry/app/models/event.rb": [
+      "/home/saasbook/Documents/foodpantry/UCBerkeleyFoodPantry/app/models/event.rb": [
         1,
         1,
         null,
@@ -299,8 +283,26 @@
         null,
         null,
         null
+      ],
+      "/home/saasbook/Documents/foodpantry/UCBerkeleyFoodPantry/app/controllers/pages_controller.rb": [
+        1,
+        1,
+        null,
+        1,
+        null,
+        1,
+        null,
+        1,
+        null,
+        1,
+        null,
+        1,
+        null,
+        1,
+        null,
+        null
       ]
     },
-    "timestamp": 1428459401
+    "timestamp": 1428991366
   }
 }

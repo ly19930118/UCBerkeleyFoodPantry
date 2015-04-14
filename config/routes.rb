@@ -15,7 +15,9 @@ Rails.application.routes.draw do
 
   #get 'pages/about'
   get 'about', to: 'pages#about'
+  get 'partners', to: 'pages#partners'
   get 'events', to: 'pages#events'
+  get 'help', to: 'pages#help'
   get 'resources', to: 'pages#resources'
   get 'inventory', to: 'pages#inventory'
   get 'contact', to: 'contact#index'

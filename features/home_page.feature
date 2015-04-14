@@ -16,12 +16,6 @@ Feature: make sure the new layout of the home page is styled correctly
 
   Scenario: homepage should have logo
     Then I should see an element ".food-pantry-logo"
-    
-  Scenario: homepage should have About Us information
-    Then I should see an "About Us" section
-    And I should see a "Mission Statement" section
-    And I should see a "Goals" section
-    And I should see a "Partners" section
 
   Scenario: the navbar should have links to all the different pages
     Then I should see links to "Home"

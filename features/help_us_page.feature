@@ -10,13 +10,13 @@ Given I am on the UCBerkeleyFoodPantry home page
 
 Scenario: see the Volunteer information
 	When I follow "Help Us"
-	Then I should be on the "Help Us Page"
+	Then I should be on the "Help Page"
 	And I should see "The UC Berkeley Food Pantry is run by volunteers from the UC Berkeley community and its supporters. Volunteers help with food collection, distribution, fundraising, and administrative tasks."
 	And I should see "If you are interested in volunteering, please email us at ucberkeleyfoodpantry@gmail.com"
 
 Scenario: donate to UCBerkeleyFoodPantry
 	When I follow "Help Us"
-	Then I should be on the "Help Us Page"
+	Then I should be on the "Help Page"
 	And I should see the page with link "donating" to "https://give.berkeley.edu/fund/index.cfm?f=FU1229000"
 
 	

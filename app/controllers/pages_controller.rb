@@ -11,4 +11,8 @@ class PagesController < ApplicationController
   end
   def login
   end
+  def partners
+  end
+  def help
+  end
 end

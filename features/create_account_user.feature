@@ -8,8 +8,8 @@ Feature: Ability to create account as a user
 
   Given I am on the UCBerkeleyFoodPantry Login page
     And the following user exists:
-      | userid                  | orders_this_month | password | admin |
-      | takenUser               | 0                 | pass123  | False |
+      | userid                  | orders_this_month | password |
+      | takenUser               | 0                 | pass123  |
 
   Scenario: create account as a user successfully
     When I follow "Create Account"

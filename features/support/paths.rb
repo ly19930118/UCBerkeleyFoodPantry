@@ -18,7 +18,7 @@ module NavigationHelpers
 		  when /^the "Inventory Page"/ then '/inventory'
 		  when /^the "Events Page"/ then '/events'
       when /^the login page/ then '/login'
-     when /^the "Edit Contact Page"/ then '/contact/edit'
+     when /^the "Edit Contact Page"/ then '/welcome/edit'
 	  end
   end
 end

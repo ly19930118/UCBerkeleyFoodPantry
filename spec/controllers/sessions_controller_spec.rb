@@ -19,7 +19,7 @@ RSpec.describe SessionsController, type: :controller do
           FactoryGirl.create(:user, credentials)
         end
 
-        it "redirects to home" do
+        it "successfully logins" do
           post 'create', {:session => credentials}
           expect(response).to have_http_status(:success)
         end

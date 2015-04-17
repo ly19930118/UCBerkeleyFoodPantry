@@ -1,11 +1,25 @@
 
 class EventsController < ApplicationController
   def index
-    @event = Event.new
-    @events = Event.all
+    if params[:id] == nil
+      @event = Event.new
+    else
+      @event = Event.find(params[:id])
+    end
+    @events = Event.all.where('start_date > ?', 3.months.ago)
   end
 
-  def create
+
+  def edit
+    new_or_edit
+  end
+
+  def new_or_edit
+    if params[:id] == nil or params[:id] == ""
+      @event = Event.new
+    else
+      @event = Event.find(params[:id])
+    end
     startDate = DateTime.new(params[:event]["start_date(1i)"].to_i, 
                         params[:event]["start_date(2i)"].to_i,
                         params[:event]["start_date(3i)"].to_i,
@@ -16,25 +30,22 @@ class EventsController < ApplicationController
                         params[:event]["end_date(3i)"].to_i,
                         params[:event]["end_date(4i)"].to_i,
                         params[:event]["end_date(5i)"].to_i)
-    @event = Event.create!(:title => params[:event][:title],
-                        :description => params[:event][:description], 
-                        :start_date => startDate,
-                        :end_date => endDate)
-    @event.save!
-    flash[:notice] = "#{@event.title} was successfully created."
+    @event[:title] = params[:event][:title]
+    @event[:description] = params[:event][:description]
+    @event[:start_date] = startDate
+    @event[:end_date] = endDate
+    @event.save
+
+    flash[:notice] = "#{@event.title} was successfully updated."
+    redirect_to events_path 
+  end
+
+  def destory
+    @event = Event.find(params[:id])
+    @event.delete
+    flash[:notice] = "#{@event.title} was deleted."
     redirect_to events_path
   end
 
-  def remove
-
-  end
-
-  def edit
-
-  end
-
-  def list
-
-  end
 
 end

@@ -6,8 +6,11 @@ Rails.application.routes.draw do
   post 'contact/edit'
   put 'contact/update'
 
-  resources :events
-
+  get 'events', to: 'events#index'
+  post 'events', to: 'events#index'
+  post 'events/edit', to: 'events#edit'
+  patch 'events/edit', to: 'events#edit'
+  post 'events/destory', to: 'events#destory'
   resources :users
   get 'users/new'
 
@@ -16,7 +19,6 @@ Rails.application.routes.draw do
   #get 'pages/about'
   get 'about', to: 'pages#about'
   get 'partners', to: 'pages#partners'
-  get 'events', to: 'pages#events'
   get 'help', to: 'pages#help'
   get 'resources', to: 'pages#resources'
   get 'inventory', to: 'pages#inventory'

@@ -30,9 +30,9 @@
 <% end %>
 
 
-<%= form_for @event, url: {action: "create"}, html: {class: "nifty_form"} do |f| %>
+<%= form_for @event, url: {action: "edit"}, html: {class: "nifty_form"} do |f| %>
   <fieldset>
-    <legend>Add New Event</legend>
+    <legend>Event Form</legend>
     <p><%= label_tag(:title, "Title: ", class: "field") %>
     <%= f.text_field :title %></p>
 
@@ -44,6 +44,44 @@
 
     <p><%= label_tag(:end_date, "End: ", class: "field") %>
     <%= f.datetime_select :end_date, :default => { :hour => 23, :minute => 59 }, :minute_step => 30 %></p>
-    <%= f.submit "Create" %>
+    <%= hidden_field_tag(:id, @event.id) %>
+    <%= f.submit "Submit" %>
   </fieldset>
 <% end %>
+
+<div id="events_table">
+  <table id="events_container">
+    <thead>
+      <tr class='noborder'>
+        <th>Title</th>
+        <th>Description</th>
+        <th>Start</th>
+        <th>End</th>
+        <th>Edit</th>
+        <th>Delete</th>
+      </tr>
+    </thead>
+    <% @events.each do |eve| %>
+      <tr>
+        <td><%= eve.title %></td>
+        <td><%= eve.description %></td>
+        <td><%= eve.start_date %></td>
+        <td><%= eve.end_date %></td>
+        <td>
+          <%= form_tag controller: "events", action: "index", method: "get" do %>
+            <%= hidden_field_tag(:id, eve.id) %>
+            <%= submit_tag "Edit" %>
+          <% end %>
+        </td>
+        <td>
+          <%= form_tag controller: "events", action: "destory", method: "post" do %>
+            <%= hidden_field_tag(:id, eve.id) %>
+            <%= submit_tag "Delete" %>
+          <% end %>
+        </td>
+      </tr>
+    <% end %>
+
+
+  </table>
+</div>

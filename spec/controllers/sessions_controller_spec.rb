@@ -1,4 +1,4 @@
-require 'rails_helper'
+require_relative '../rails_helper'
 
 RSpec.describe SessionsController, type: :controller do
 
@@ -9,14 +9,26 @@ RSpec.describe SessionsController, type: :controller do
     end
   end
 
-  describe "GET #create" do
-    it "should create a new user if password/username is correct" do
-      get :create
-      expect(response).to have_http_status(:success)
+  describe "POST #create" do
+    context "should login a new user if password/username is correct" do
+        let :credentials do
+          { :userid => 'fakeUser', :password => 'pass123' }
+        end
+
+        let :user do
+          FactoryGirl.create(:user, credentials)
+        end
+
+        it "redirects to home" do
+          post 'create', {:session => credentials}
+          expect(response).to have_http_status(:success)
+        end
     end
-    it "should render get #new if password/username is incorrect" do
-      get :new
-      expect(response).to have_http_status(:success)
+
+    it "should render sessions#new if password/username is incorrect" do
+      fakeUser = double(:userid => "fakeUser", :password => "pass123")
+      post :create, {:session => {:userid => "fakeUser", :password => "pass12"}}
+      expect(response).to render_template("sessions/new")
     end
   end
 

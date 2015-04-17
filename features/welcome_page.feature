@@ -6,6 +6,7 @@ Feature: make sure you can see the contact information on the page
 
   Background: The new tabs template has been set up
 
+  Given I am on the UCBerkeleFoodPantry home page
   Given the following contact information exists:
   | email          | facebook          | location |hours         |
   | food@gmail.com | facebook.com/food | Berkeley | Mondays: 3PM |

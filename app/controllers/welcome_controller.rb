@@ -1,6 +1,9 @@
 class WelcomeController < ApplicationController
 	def index
-		@contact = Contact.first
+    @contact = Contact.first
+    if Contact.first == nil
+      @contact = Contact.create!({:email => 'fill me out!', :facebook => 'fill me out!', :location => 'fill me out!', :hours => "fill me out!"})
+    end
   end
 
   def edit

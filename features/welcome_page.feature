@@ -5,14 +5,10 @@ Feature: make sure you can see the contact information on the page
   I want to see contact information on the contact page
 
   Background: The new tabs template has been set up
-
-  Given I am on the UCBerkeleFoodPantry home page
-  Given the following contact information exists:
-  | email          | facebook          | location |hours         |
-  | food@gmail.com | facebook.com/food | Berkeley | Mondays: 3PM |
+  Given I am on the UCBerkeleyFoodPantry home page
 
   Scenario: see contact information
-    I should see the page with link "Send Us An Email!" to "mailto:food@gmail.com"
-    And I should see the page with link "Facebook Link" to "facebook.com/food"
-    And I should see "Location: Berkeley"
-    And I should see "Hours for Spring 2015"
+    I should see the page with link "Send Us An Email!" to "mailto:fill me out!"
+    And I should see the page with link "Facebook Link" to "fill me out!"
+    And I should see "Location: fill me out!"
+    And I should see "Hours for Spring 2015 fill me out!"

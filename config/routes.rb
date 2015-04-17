@@ -1,10 +1,5 @@
 Rails.application.routes.draw do
   get 'sessions/new'
-  
-  #contact page
-  get 'contact/index'
-  post 'contact/edit'
-  put 'contact/update'
 
   get 'events', to: 'events#index'
   post 'events', to: 'events#index'
@@ -26,7 +21,11 @@ Rails.application.routes.draw do
   get 'signup', to: 'users#new'
   get 'login', to: 'sessions#new'
   post 'login', to: 'sessions#create'
+  
+  #homepage contact routes
   get 'welcome/index'
+  post 'welcome/edit'
+  put 'welcome/update'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

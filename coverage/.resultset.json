@@ -155,6 +155,7 @@
   },
   "Cucumber Features": {
     "coverage": {
+<<<<<<< HEAD
       "/home/saasbook/Documents/foodpantry/UCBerkeleyFoodPantry/app/controllers/welcome_controller.rb": [
 >>>>>>> ee22392ce29e8b47bf7553c8d12511e6a13ea770
         1,
@@ -389,5 +390,17 @@
     },
     "timestamp": 1428991366
 >>>>>>> ee22392ce29e8b47bf7553c8d12511e6a13ea770
+=======
+      "/Users/Unzi/foodpantry/UCBerkeleyFoodPantry/app/models/contact.rb": [
+        1,
+        1,
+        0,
+        0,
+        null,
+        null
+      ]
+    },
+    "timestamp": 1429233334
+>>>>>>> d45420171ea3ad66d6f9ad9b9e0012bfcc57dffc
   }
 }

@@ -7,8 +7,6 @@ class PagesController < ApplicationController
   end
   def resources
   end
-  def contact
-  end
   def login
   end
   def partners

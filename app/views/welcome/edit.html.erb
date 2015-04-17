@@ -1,0 +1,25 @@
+<h2>Edit Contact Page</h2>
+
+<%= form_tag welcome_update_path, :method => :put do %>
+	<%= label :contact, :email, 'Email: ' %>
+	<%= text_field :contact, 'email', :size=>"50" %>
+	<br>
+
+	<%= label :contact, :facebook, 'Facebook: ' %>
+	<%= text_field :contact, 'facebook', :size=>"50" %>
+	<br>
+
+	<%= label :contact, :hours, 'Hours: ' %>
+	<%= text_area :contact, 'hours', :rows=>"7" %>
+	<br>
+
+	<%= label :contact, :location, 'Location: ' %>
+	<%= text_field :contact, 'location', :size=>"50" %>
+	<br>
+
+	<%= submit_tag 'Update Contact Info' %>
+
+<% end %>
+
+
+

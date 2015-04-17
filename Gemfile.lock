@@ -86,6 +86,11 @@ GEM
     docile (1.1.5)
     erubis (2.7.0)
     execjs (2.3.0)
+    factory_girl (4.5.0)
+      activesupport (>= 3.0.0)
+    factory_girl_rails (4.5.0)
+      factory_girl (~> 4.5.0)
+      railties (>= 3.0.0)
     fullcalendar-rails (2.3.1.0)
       jquery-rails (>= 3.1.1, < 5.0.0)
       momentjs-rails (~> 2.8, >= 2.8.4)
@@ -230,6 +235,7 @@ DEPENDENCIES
   cucumber-rails
   database_cleaner
   debugger
+  factory_girl_rails
   fullcalendar-rails
   jbuilder (~> 2.0)
   jquery-rails

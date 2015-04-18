@@ -5,6 +5,7 @@ class WelcomeController < ApplicationController
 		else
 			@is_admin = false
 		end
+
     if Contact.first == nil
       @contact = Contact.create!({:email => 'fill me out!', :facebook => 'fill me out!', :location => 'fill me out!', :hours => "fill me out!"})
     else

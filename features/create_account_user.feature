@@ -13,7 +13,7 @@ Feature: Ability to create account as a user
       | takenUser               | 0                 | pass123  |
 
   Scenario: create account as a user successfully
-    When I follow "Sign up now"
+    When I follow "Sign up now!"
     Then I should be on the Signup page
     And I should see a field "user_userid"
     And I should see a field "user_password"
@@ -27,7 +27,7 @@ Feature: Ability to create account as a user
     And I should see "Logout"
 
   Scenario: unable to create new account with a taken username
-    When I follow "Sign up now"
+    When I follow "Sign up now!"
     Then I should be on the Signup page
     And I should see a field "user_userid"
     And I should see a field "user_password"
@@ -42,7 +42,7 @@ Feature: Ability to create account as a user
 
 
   Scenario: unable to create new account with an incorrect password confirmation
-    When I follow "Sign up now"
+    When I follow "Sign up now!"
     Then I should be on the Signup page
     And I should see a field "user_userid"
     And I should see a field "user_password"
@@ -56,7 +56,7 @@ Feature: Ability to create account as a user
     And I should see "Password confirmation doesn't match Password"
 
   Scenario: unable to create new account with an insecure password
-    When I follow "Sign up now"
+    When I follow "Sign up now!"
     Then I should be on the Signup page
     And I should see a field "user_userid"
     And I should see a field "user_password"

@@ -14,8 +14,9 @@
         <li><%=day%></li>
       <%end %>
 	  </ul>
-
-<%= button_to 'Edit Contact Info', welcome_edit_path %>
+<% if @is_admin %>
+	<%= button_to 'Edit Contact Info', welcome_edit_path %>
+<% end %>
 
 </div>
 

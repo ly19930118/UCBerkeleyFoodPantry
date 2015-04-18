@@ -8,8 +8,4 @@ Feature: make sure Resources Page works correctly
 
   Scenario: go to the resources page
     Given I am on the "Resources Page"
-    Then I should see the page with link "cs169" to "https://sites.google.com/site/ucbsaas/"
-    Then I should see the page with link "old website" to "http://pantry.asuc.org/"
-    And I should see "Resource1"
-    And I should see "Resource2"
-    And I should see "Resource3" 
+    Then I should see the page with link "http://financialaid.berkeley.edu/food-resources" to "http://financialaid.berkeley.edu/food-resources"

@@ -43,7 +43,27 @@
   },
   "Cucumber Features": {
     "coverage": {
-      "/Users/Unzi/foodpantry/UCBerkeleyFoodPantry/app/models/user.rb": [
+      "/Users/michelleling/Desktop/current/cs169/UCBerkeleyFoodPantry/FoodPantry/app/controllers/welcome_controller.rb": [
+        1,
+        1,
+        22,
+        3,
+        null,
+        19,
+        null,
+        null,
+        22,
+        21,
+        null,
+        1,
+        null,
+        null,
+        null,
+        1,
+        1,
+        null,
+        null,
+        1,
         1,
         1,
         1,
@@ -51,111 +71,179 @@
         null,
         null
       ],
-      "/Users/Unzi/foodpantry/UCBerkeleyFoodPantry/app/controllers/sessions_controller.rb": [
+      "/Users/michelleling/Desktop/current/cs169/UCBerkeleyFoodPantry/FoodPantry/app/controllers/application_controller.rb": [
+        1,
+        null,
+        null,
+        1,
+        1,
+        null
+      ],
+      "/Users/michelleling/Desktop/current/cs169/UCBerkeleyFoodPantry/FoodPantry/app/helpers/application_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/michelleling/Desktop/current/cs169/UCBerkeleyFoodPantry/FoodPantry/app/helpers/contact_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/michelleling/Desktop/current/cs169/UCBerkeleyFoodPantry/FoodPantry/app/helpers/pages_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/michelleling/Desktop/current/cs169/UCBerkeleyFoodPantry/FoodPantry/app/helpers/sessions_helper.rb": [
+        1,
+        1,
+        2,
+        null,
+        1,
+        63,
+        null,
+        1,
+        38,
+        null,
+        1,
+        0,
+        0,
+        null,
+        null
+      ],
+      "/Users/michelleling/Desktop/current/cs169/UCBerkeleyFoodPantry/FoodPantry/app/helpers/users_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/michelleling/Desktop/current/cs169/UCBerkeleyFoodPantry/FoodPantry/app/helpers/welcome_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/michelleling/Desktop/current/cs169/UCBerkeleyFoodPantry/FoodPantry/app/models/user.rb": [
+        1,
+        1,
+        1,
+        1,
+        null,
+        null
+      ],
+      "/Users/michelleling/Desktop/current/cs169/UCBerkeleyFoodPantry/FoodPantry/app/models/contact.rb": [
+        1,
+        1,
+        22,
+        22,
+        44,
+        null,
+        null,
+        null
+      ],
+      "/Users/michelleling/Desktop/current/cs169/UCBerkeleyFoodPantry/FoodPantry/app/controllers/pages_controller.rb": [
         1,
         1,
         null,
         1,
-        1,
+        null,
         1,
         null,
         1,
-        1,
+        null,
         1,
         null,
+        1,
+        null,
+        1,
+        null,
+        null
+      ],
+      "/Users/michelleling/Desktop/current/cs169/UCBerkeleyFoodPantry/FoodPantry/app/controllers/events_controller.rb": [
+        null,
+        1,
+        1,
+        2,
+        2,
+        null,
+        0,
+        null,
+        null,
+        2,
+        null,
+        null,
+        null,
+        1,
+        0,
+        null,
+        null,
+        1,
+        null,
+        0,
+        0,
+        null,
+        0,
+        null,
+        0,
+        null,
+        null,
+        null,
+        null,
+        0,
+        null,
+        null,
+        null,
+        null,
+        0,
+        0,
+        0,
+        0,
+        0,
         null,
         0,
         0,
         null,
         null,
         1,
+        0,
+        0,
+        0,
+        0,
+        null,
+        null,
         null,
         null
       ],
-      "/Users/Unzi/foodpantry/UCBerkeleyFoodPantry/app/controllers/application_controller.rb": [
-        1,
-        null,
-        null,
-        1,
-        1,
-        null
-      ],
-      "/Users/Unzi/foodpantry/UCBerkeleyFoodPantry/app/helpers/application_helper.rb": [
-        1,
-        null
-      ],
-      "/Users/Unzi/foodpantry/UCBerkeleyFoodPantry/app/helpers/contact_helper.rb": [
-        1,
-        null
-      ],
-      "/Users/Unzi/foodpantry/UCBerkeleyFoodPantry/app/helpers/pages_helper.rb": [
-        1,
-        null
-      ],
-      "/Users/Unzi/foodpantry/UCBerkeleyFoodPantry/app/helpers/sessions_helper.rb": [
-        1,
+      "/Users/michelleling/Desktop/current/cs169/UCBerkeleyFoodPantry/FoodPantry/app/models/event.rb": [
         1,
         1,
         null,
         1,
-        7,
+        0,
+        null,
         null,
         1,
-        4,
+        0,
         null,
-        1,
-        1,
-        1,
+        null,
         null,
         null
       ],
-      "/Users/Unzi/foodpantry/UCBerkeleyFoodPantry/app/helpers/users_helper.rb": [
+      "/Users/michelleling/Desktop/current/cs169/UCBerkeleyFoodPantry/FoodPantry/app/controllers/sessions_controller.rb": [
         1,
-        null
-      ],
-      "/Users/Unzi/foodpantry/UCBerkeleyFoodPantry/app/helpers/welcome_helper.rb": [
-        1,
-        null
-      ],
-      "/Users/Unzi/foodpantry/UCBerkeleyFoodPantry/app/controllers/welcome_controller.rb": [
-        1,
-        1,
-        2,
         1,
         null,
         1,
-        null,
+        3,
+        3,
         null,
         2,
-        1,
-        null,
-        1,
-        null,
-        null,
-        null,
-        1,
-        1,
-        null,
-        null,
-        1,
-        1,
-        1,
-        1,
-        1,
-        null,
-        null
-      ],
-      "/Users/Unzi/foodpantry/UCBerkeleyFoodPantry/app/models/contact.rb": [
-        1,
-        1,
         2,
         2,
-        4,
         null,
+        null,
+        1,
+        1,
+        null,
+        null,
+        1,
         null,
         null
       ]
     },
-    "timestamp": 1429337126
+    "timestamp": 1429338218
   }
 }

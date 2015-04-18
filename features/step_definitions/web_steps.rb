@@ -100,3 +100,7 @@ When /^(?:|I )fill in "([^"]*)" with "([^"]*)"$/ do |field, value|
   fill_in(field, :with => value)
 end
 
+Then /^(?:|I )should not see "([^"]*)"$/ do |text|
+  page.body.should_not include_text(text)
+end
+

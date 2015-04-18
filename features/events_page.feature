@@ -12,3 +12,4 @@ Feature: events page is properly defined
     When I follow "Events"
     Then I should be on the "Events Page"
     Then I should see the element "calendar"
+    Then I should not see "Event Form"

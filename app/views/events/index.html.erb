@@ -70,13 +70,13 @@
         <td>
           <%= form_tag controller: "events", action: "index", method: "get" do %>
             <%= hidden_field_tag(:id, eve.id) %>
-            <%= submit_tag "Edit" %>
+            <%= submit_tag "Edit", id: "edit_#{eve.id}"%>
           <% end %>
         </td>
         <td>
           <%= form_tag controller: "events", action: "destory", method: "post" do %>
             <%= hidden_field_tag(:id, eve.id) %>
-            <%= submit_tag "Delete" %>
+            <%= submit_tag "Delete", id: "delete_#{eve.id}" %>
           <% end %>
         </td>
       </tr>

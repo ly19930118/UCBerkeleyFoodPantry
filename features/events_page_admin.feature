@@ -6,40 +6,34 @@ Feature: admins should have the ability to edit events
 
 Background: The new tabs template has been set up
 
-  Given the following event exists:
-  | title      | date     | description                        |
-  | Test Event | 04-01-15 | can we edit and delete this event? |
+  Given the following events exist:
+  | title      | start_date | end_date    | description                        |
+  | hello      | 04-01-2015 | 04-01-2015  | can we edit and delete this event? |
 
   Scenario: as an admin, be able to see and create events
     Given I am on the Events Page
-    Then I should see "Create Event"
-    When I fill in "Title of Event" with "title"
-    And I fill in "Date" with "date"
+    Then I should see "Event Form"
+    When I fill in "Title" with "title"
     And I fill in "Description" with "description"
-    When I press "Create Event"
+    When I click the "Submit" button
     Then I should be on the Events Page
     And I should see "title"
-    When I follow "title"
-    Then I should be on the Information Page for "title"
     And I should see "description"
 
   Scenario: edit an event
     Given I am on the Events Page
-    When I follow "Test Event"
-    Then I should be on the Information Page for "Test Event"
-    And I should see "Edit Event"
-    When I fill in "Title of Event" with "new title"
-    And I fill in "Date" with "new date"
-    And I fill in "Description" with "new description"
-    And I press "Edit Event"
+    When I click the "edit_0" button
+    Then I fill in "Title" with "hi"
+    And I fill in "Description" with "hi2"
+    And I click the "Submit" button
     Then I should be on the Events Page
-    And I should see "new title"
-    When I follow "new title"
-    Then I should see "new description"
+    And I should see "hi"
+    And I should see "hi2"
+    And I should not see "hello"
 
   Scenario: delete an event
-    Given I am on the Information Page for "new title"
-    When I press "Delete Event"
+    Given I am on the Events Page
+    When I click the "delete_0" button
     Then I should be on the Events Page
-    And I should not see "new title"
+    And I should not see "hello"
 

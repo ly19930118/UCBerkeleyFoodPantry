@@ -1,11 +1,11 @@
 
 class EventsController < ApplicationController
   def index
-    #if current_user
-    #  @is_admin = current_user.admin
-    #else
-    #  @is_admin = false
-    #end
+    if current_user
+      @is_admin = current_user.admin
+    else
+      @is_admin = false
+    end
 
     if params[:id] == nil
       @event = Event.new

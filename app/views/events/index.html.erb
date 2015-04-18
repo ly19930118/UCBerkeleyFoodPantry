@@ -28,7 +28,7 @@
 
     });
 <% end %>
-<%# <% if @is_admin %>
+<% if @is_admin %>
   <%= form_for @event, url: {action: "edit"}, html: {class: "nifty_form"} do |f| %>
     <fieldset>
       <legend>Event Form</legend>
@@ -84,4 +84,4 @@
 
     </table>
   </div>  
-<%# <% end %>
+<% end %>

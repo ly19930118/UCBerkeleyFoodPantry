@@ -6,6 +6,7 @@ class EventsController < ApplicationController
     else
       @event = Event.find(params[:id])
     end
+
     @events = Event.all.where('start_date > ?', 3.months.ago)
   end
 
@@ -15,6 +16,7 @@ class EventsController < ApplicationController
   end
 
   def new_or_edit
+
     if params[:id] == nil or params[:id] == ""
       @event = Event.new
     else

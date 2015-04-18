@@ -54,6 +54,7 @@ group :development, :test do
   gem 'cucumber-rails', :require => false
   gem 'rspec-rails', '~> 3.0'
   gem 'simplecov'
+  gem 'factory_girl_rails'
 end
 
 group :production do

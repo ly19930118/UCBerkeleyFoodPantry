@@ -17,6 +17,6 @@ Scenario: see the Volunteer information
 Scenario: donate to UCBerkeleyFoodPantry
 	When I follow "Help Us"
 	Then I should be on the "Help Page"
-	And I should see the page with link "donating" to "https://give.berkeley.edu/fund/index.cfm?f=FU1229000"
+	And I should see the page with link "donating" to "https://givetocal.berkeley.edu/fund/?f=FU1229000"
 
 	

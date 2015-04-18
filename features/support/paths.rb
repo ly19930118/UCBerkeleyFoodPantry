@@ -12,14 +12,15 @@ module NavigationHelpers
   #
   def path_to(page_name)
   	case page_name
-	  	when /^the (UCBerkeleyFoodPantry )?home\s?page$/ then '/welcome/index'
+	  	when /^the (UCBerkeleyFoodPantry )?home\s?page$/ then '/'
 		  when /^the "About Page"/ then '/about'
 		  when /^the "Resources Page"/ then '/resources'
 		  when /^the "Inventory Page"/ then '/inventory'
 		  when /^the "Events Page"/ then '/events'
+		  when /^the "Help Page"/ then '/help'
+		  when /^the "Partners Page"/ then '/partners'
       when /^the login page/ then '/login'
-  	 when /^the "Contact Page"/ then '/contact'
-     when /^the "Edit Contact Page"/ then '/contact/edit'
+     when /^the "Edit Contact Page"/ then '/welcome/edit'
 	  end
   end
 end

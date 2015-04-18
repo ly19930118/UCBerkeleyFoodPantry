@@ -3,6 +3,8 @@ Feature: make sure the partners page is set up and displays proper information
 	As a person who is curious as to who the partners for this food pantry are,
 	When I go to the Partners Page for the UC Berkeley Food Pantry Website,
 	I want to see a list of all the partners for the food pantry.
+
+	Background: The new tabs template has been set up
   
   Given I am on the UCBerkeleFoodPantry home page
   

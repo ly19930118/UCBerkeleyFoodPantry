@@ -101,6 +101,6 @@ When /^(?:|I )fill in "([^"]*)" with "([^"]*)"$/ do |field, value|
 end
 
 Then /^(?:|I )should not see "([^"]*)"$/ do |text|
-  page.body.should_not include_text(text)
+  page.body.should_not have_content(text)
 end
 

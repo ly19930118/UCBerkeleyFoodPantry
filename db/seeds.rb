@@ -9,3 +9,4 @@
 # Contact.create!({:email => 'ucberkeleyfoodpantry@gmail.com', :facebook => 'http://facebook.com/ucberkeleyfoodpantry', :location => 'Stiles Hall at 2400 Bancroft Way', :hours => "Monday: 12 - 3 pm\nTuesday: 1 - 3 pm\nThursday: 10 - 11 am, 1 - 3 pm\nFriday: 10 am - 12 pm\nSaturday: CLOSED\nSunday: CLOSED"})
 # User.create(:userid => 'unzunz', :admin => true, :orders_this_month => 0, :password => 'whyNoWork94')
 
+#User.create(:userid => 'unzunz', :admin => true, :orders_this_month => 0, :password => 'whyNoWork94')

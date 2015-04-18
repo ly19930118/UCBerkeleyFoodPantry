@@ -1,7 +1,9 @@
 class SessionsController < ApplicationController
+
   def new
     log_out
   end
+
   def create
     user = User.find_by(userid: params[:session][:userid])
     if user && user.authenticate(params[:session][:password])
@@ -15,6 +17,8 @@ class SessionsController < ApplicationController
       render 'new'
     end
   end
+
   def destroy
   end
+
 end

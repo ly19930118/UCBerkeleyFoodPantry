@@ -5,22 +5,22 @@ Feature: admins should have the ability to edit events
   I want to be able to edit the events on the calendar on the Events Page
 
 Background: The new tabs template has been set up
-  #Given I am on the UCBerkeleyFoodPantry Login page
-  #Given the following users exists:
-  #  | userid             | orders_this_month | password |
-  #  | cheezit            | 0                 | pass123  |
+  Given I am on the UCBerkeleyFoodPantry Login page
+  Given the following users exists:
+    | userid             | orders_this_month | password |
+    | cheezit            | 0                 | pass123  |
 
     
 
   Scenario: as an admin, be able to see and create events
 
-    #And I am on the login page
+    And I am on the login page
 
-    #When I fill out the form with the following attributes:
-    #  | session_userid     | cheezit |
-    #  | session_password   | pass123 |
-    #And I click the "Log in" button
-    #Then I should be on the UCBerkeleyFoodPantry home page
+    When I fill out the form with the following attributes:
+      | session_userid     | cheezit |
+      | session_password   | pass123 |
+    And I click the "Log in" button
+    Then I should be on the UCBerkeleyFoodPantry home page
 
     Given I am on the home page
     When I follow "Events"
@@ -31,6 +31,14 @@ Background: The new tabs template has been set up
     And I should see "yoyo"
     And I should see "thx"
   Scenario: edit an event
+
+    And I am on the login page
+
+    When I fill out the form with the following attributes:
+      | session_userid     | cheezit |
+      | session_password   | pass123 |
+    And I click the "Log in" button
+    Then I should be on the UCBerkeleyFoodPantry home page
     Given I am on the home page
     When I follow "Events"
 
@@ -48,6 +56,13 @@ Background: The new tabs template has been set up
     And I should not see "yoyo"
   
   Scenario: delete an event
+    And I am on the login page
+
+    When I fill out the form with the following attributes:
+      | session_userid     | cheezit |
+      | session_password   | pass123 |
+    And I click the "Log in" button
+    Then I should be on the UCBerkeleyFoodPantry home page
     Given I am on the home page
     When I follow "Events"
 

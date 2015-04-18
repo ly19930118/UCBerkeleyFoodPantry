@@ -1,6 +1,7 @@
 {
-  "RSpec": {
+  "Cucumber Features": {
     "coverage": {
+<<<<<<< HEAD
       "D:/School/Current/CS 169/proj/UCBerkeleyFoodPantry/app/helpers/application_helper.rb": [
         1,
         null
@@ -52,11 +53,16 @@
         3,
         null,
         null,
+=======
+      "/home/saasbook/Documents/foodpantry/UCBerkeleyFoodPantry/app/controllers/pages_controller.rb": [
+        1,
+>>>>>>> c2d2021f623a7ed4bdd109dd1bfd7ae952b36dc6
         1,
         null,
         3,
         1,
         null,
+<<<<<<< HEAD
         2,
         null,
         3,
@@ -77,8 +83,18 @@
         null,
         3,
         3,
+=======
+        1,
+        null,
+        1,
+        null,
+        1,
+        null,
+        1,
+>>>>>>> c2d2021f623a7ed4bdd109dd1bfd7ae952b36dc6
         null,
         null,
+<<<<<<< HEAD
         1,
         2,
         2,
@@ -90,6 +106,11 @@
         null
       ],
       "D:/School/Current/CS 169/proj/UCBerkeleyFoodPantry/app/controllers/application_controller.rb": [
+=======
+        null
+      ],
+      "/home/saasbook/Documents/foodpantry/UCBerkeleyFoodPantry/app/controllers/application_controller.rb": [
+>>>>>>> c2d2021f623a7ed4bdd109dd1bfd7ae952b36dc6
         1,
         null,
         null,
@@ -97,6 +118,7 @@
         1,
         null
       ],
+<<<<<<< HEAD
       "D:/School/Current/CS 169/proj/UCBerkeleyFoodPantry/app/models/event.rb": [
         1,
         1,
@@ -114,6 +136,46 @@
       ],
       "D:/School/Current/CS 169/proj/UCBerkeleyFoodPantry/app/models/user.rb": [
         1,
+=======
+      "/home/saasbook/Documents/foodpantry/UCBerkeleyFoodPantry/app/helpers/application_helper.rb": [
+        1,
+        null
+      ],
+      "/home/saasbook/Documents/foodpantry/UCBerkeleyFoodPantry/app/helpers/contact_helper.rb": [
+        1,
+        null
+      ],
+      "/home/saasbook/Documents/foodpantry/UCBerkeleyFoodPantry/app/helpers/pages_helper.rb": [
+        1,
+        null
+      ],
+      "/home/saasbook/Documents/foodpantry/UCBerkeleyFoodPantry/app/helpers/sessions_helper.rb": [
+        1,
+        1,
+        0,
+        null,
+        1,
+        1,
+        null,
+        1,
+        1,
+        null,
+        1,
+        0,
+        0,
+        null,
+        null
+      ],
+      "/home/saasbook/Documents/foodpantry/UCBerkeleyFoodPantry/app/helpers/users_helper.rb": [
+        1,
+        null
+      ],
+      "/home/saasbook/Documents/foodpantry/UCBerkeleyFoodPantry/app/helpers/welcome_helper.rb": [
+        1,
+        null
+      ],
+      "/home/saasbook/Documents/foodpantry/UCBerkeleyFoodPantry/app/models/user.rb": [
+>>>>>>> c2d2021f623a7ed4bdd109dd1bfd7ae952b36dc6
         1,
         1,
         1,
@@ -122,6 +184,10 @@
         null
       ]
     },
+<<<<<<< HEAD
     "timestamp": 1429322838
+=======
+    "timestamp": 1429320998
+>>>>>>> c2d2021f623a7ed4bdd109dd1bfd7ae952b36dc6
   }
 }

@@ -3,8 +3,10 @@ Feature: make sure the about page is set up correctly
 	As a curious browser,
 	When I go to the About Page for the UC Berkeley Food Pantry Website,
 	I want to see information about the Food Pantry.
+	
+	Background: The new tabs template has been set up
   
-  Given I am on the UCBerkeleFoodPantry home page
+  Given I am on the UCBerkeleyFoodPantry home page
   
   Scenario: about page should have About Us information, Mission statement, and Goals
     When I follow "About"

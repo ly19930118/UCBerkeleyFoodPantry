@@ -6,9 +6,19 @@ Feature: admins should have the ability to edit contact information
 
 Background: The new tabs template has been set up
 
+  Given the following users exists:
+    | userid             | orders_this_month | password |
+    | cheezit            | 0                 | pass123  |
+
+    And I am on the login page
+
   Scenario: as an admin, be able to edit hours
-    Given I am on the UCBerkeleyFoodPantry home page
-    Then I should see "Edit Contact Info" button
+      When I fill out the form with the following attributes:
+        | session_userid     | cheezit |
+        | session_password   | pass123 |
+    And I click the "Log in" button
+    Then I should be on the UCBerkeleyFoodPantry home page
+    And I should see "Edit Contact Info" button
     When I click the "Edit Contact Info" button
     Then I should be on the "Edit Contact Page"
     When I fill in "Email:" with "new email"

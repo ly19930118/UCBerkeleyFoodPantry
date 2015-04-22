@@ -13,9 +13,9 @@ Feature: Inventory page is properly defined
     | cookies            | 8                 | 2        |
 
   And the following users exists:
-    | userid             | orders_this_month | password |
-    | cheezit            | 0                 | pass123  |
-    | greedy             | 2                 | pass321  |
+    | userid             | orders_this_month | password | admin
+    | cheezit            | 0                 | pass123  | false
+    | greedy             | 2                 | pass321  | false
 
   And I am on the UCBerkeleyFoodPantry home page
 
@@ -61,6 +61,7 @@ Feature: Inventory page is properly defined
   	Then I should be on the UCBerkeleyFoodPantry home page
   	And I should see "Sorry! You can only order twice a month!"
   
+
   
   
 

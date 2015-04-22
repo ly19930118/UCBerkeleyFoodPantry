@@ -36,6 +36,18 @@ Feature: Inventory page is properly defined
   	And I click the "Submit" button
   	Then I should be on the UCBerkeleyFoodPantry home page
   	And I should see "Your order was processed successfully! Thank you!"
+
+  Scenario: after form submit quantity for foods update correctly
+    Given I am logged in as user cheezit
+    And I am on the Inventory Page
+    When I fill in "cookies_box" with "2"
+    And I fill in "granola_box" with "1"
+    And I click the "Submit" button
+    Then I should be on the UCBerkeleyFoodPantry home page
+    And I should see "Your order was processed successfully! Thank you!"
+    And I follow "Inventory"
+    Then I shoould see "cookies, quantity: 6"
+    And I should see "granola, quantity: 9"
   	
   Scenario: accidentally filled in textbox with invalid entry should get error message
   	Given I am logged in as user cheezit

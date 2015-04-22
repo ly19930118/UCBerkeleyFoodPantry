@@ -14,9 +14,9 @@ Feature: Inventory page is properly defined
     | carrots            | 1                 | 2        |
 
   And the following users exists:
-    | userid             | orders_this_month | password | admin
-    | cheezit            | 0                 | pass123  | false
-    | greedy             | 2                 | pass321  | false
+    | userid             | orders_this_month | password | admin |
+    | cheezit            | 0                 | pass123  | false |
+    | greedy             | 2                 | pass321  | false |
 
   And I am on the UCBerkeleyFoodPantry home page
 
@@ -30,7 +30,7 @@ Feature: Inventory page is properly defined
     And I should see "cookies"
     
   Scenario: set how many food items you want and submit the form successfully
-  	Given I am logged in as user cheezit
+  	Given I am logged in as user "cheezit"
   	And I am on the Inventory Page
   	When I fill in "cookies_box" with "2"
   	And I fill in "granola_box" with "1"
@@ -39,7 +39,7 @@ Feature: Inventory page is properly defined
   	And I should see "Your order was processed successfully! Thank you!"
 
   Scenario: after form submit quantity for foods update correctly
-    Given I am logged in as user cheezit
+    Given I am logged in as user "cheezit"
     And I am on the Inventory Page
     When I fill in "cookies_box" with "2"
     And I fill in "granola_box" with "1"
@@ -47,11 +47,11 @@ Feature: Inventory page is properly defined
     Then I should be on the UCBerkeleyFoodPantry home page
     And I should see "Your order was processed successfully! Thank you!"
     And I follow "Inventory"
-    Then I shoould see "cookies, quantity: 6"
+    Then I should see "cookies, quantity: 6"
     And I should see "granola, quantity: 9"
   	
   Scenario: accidentally filled in textbox with invalid entry should get error message
-  	Given I am logged in as user cheezit
+  	Given I am logged in as user "cheezit"
   	And I am on the Inventory Page
   	When I fill in "cookies_box" with "a"
   	And I click the "Submit" button
@@ -59,7 +59,7 @@ Feature: Inventory page is properly defined
   	And I should see "Invalid entry! Check that you only put in numbers!"
   
   Scenario: try to order more than maximum number of a food item
-  	Given I am logged in as user cheezit
+  	Given I am logged in as user "cheezit"
   	And I am on the Inventory Page
   	When I fill in "cookies_box" with "8"
   	And I click the "Submit" button
@@ -67,14 +67,14 @@ Feature: Inventory page is properly defined
   	And I should see "Can't order more than the maximum number of the food"
 
   Scenario: try to order more than current quantity
-    Given I am logged in as user cheezit
+    Given I am logged in as user "cheezit"
     And I am on the Inventory Page
     When I fill in "carrots_box" with "2"
     And I click the "Submit" button
     Then I should see "Sorry, there aren't that many in stock!"
   	
   Scenario: if you ordered twice in one month already, can't order more
-  	Given I am logged in as user greedy
+  	Given I am logged in as user "greedy"
   	And I am on the Inventory Page
   	When I fill in "cookies_box" with "1"
   	And I click the "submit" button

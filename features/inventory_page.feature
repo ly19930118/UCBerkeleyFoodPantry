@@ -11,6 +11,7 @@ Feature: Inventory page is properly defined
     | granola            | 10                | 2        |
     | cereal             | 20                | 1        |
     | cookies            | 8                 | 2        |
+    | carrots            | 2                 | 1        |
 
   And the following users exists:
     | userid             | orders_this_month | password | admin
@@ -64,6 +65,13 @@ Feature: Inventory page is properly defined
   	And I click the "Submit" button
   	Then I should be on the Inventory Page
   	And I should see "Can't order more than the maximum number of the food"
+
+  Scenario: try to order more than current quantity
+    Given I am logged in as user cheezit
+    And I am on the Inventory Page
+    When I fill in "carrots_box" with "3"
+    And I click the "Submit" button
+    Then I should see "Sorry, please place a smaller quantity!"
   	
   Scenario: if you ordered twice in one month already, can't order more
   	Given I am logged in as user greedy

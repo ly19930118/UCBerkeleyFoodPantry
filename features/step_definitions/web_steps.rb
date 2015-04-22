@@ -84,7 +84,7 @@ Then /^I should not see "([^"]*)" button$/ do |button|
   expect have_no_button button
 end
 
-Given /^I am logged in as user$/ do
+Given /^I am logged in as user "([^"]*)"$/ do
 
 end
 

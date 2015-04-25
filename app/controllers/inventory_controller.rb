@@ -5,6 +5,11 @@ class InventoryController < ApplicationController
     else
       @is_admin = false
     end
+    if params[:id] == nil
+      @inventory_item = InventoryItem.new
+    else
+      @inventory_item = InventoryItem.find(params[:id])
+    end
     #pull data from doc
     #i.val i.id i.name
     @items = InventoryItem.all

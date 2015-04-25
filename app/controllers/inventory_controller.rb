@@ -21,24 +21,25 @@ class InventoryController < ApplicationController
     numItems = 0
     emailText = ""
     # check if valid value
-    params[:items].each do |item|
+    params[:items].each do |key, item|
       if item[:checked] == "1"
         if item.has_key?(:value)
-          numItems = numItems + item[:value]
+          numCurrent = item[:value].to_i
         else
-          numItems = numItems + 1
+          numCurrent = 1
         end
+        numItems = numItems + numCurrent
         #construct the email string
-        #emailText = item[:]
+        emailText = emailText + item[:name] + " x " + numCurrent.to_s + "; \n"
 
       end
 
     end
 
     #send email
-
+    flash[:notice] = "email: " + emailText
     #redirect to survey
-    redirect_to :index
+    redirect_to inventory_path
 
   end
 

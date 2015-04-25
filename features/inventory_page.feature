@@ -1,8 +1,8 @@
 Feature: Inventory page is properly defined
 
   As an UC Berkeley Food Pantry user,
-  I want to able to submit an item through the inventory form, 
-  So that I can get the item I want.
+  I want to able to submit what food items I want through the inventory form and be told what items I can't order, 
+  So that I can get the items I want.
 
   Background: The new tabs template has been set up
   

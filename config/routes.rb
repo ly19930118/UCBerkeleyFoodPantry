@@ -1,20 +1,22 @@
 Rails.application.routes.draw do
   get 'sessions/new'
 
-
   get 'inventory', to: 'inventory#index'
   post 'inventory/order', to: 'inventory#order'
   get 'events', to: 'events#index'
   post 'events', to: 'events#index'
   post 'events/edit', to: 'events#edit'
   patch 'events/edit', to: 'events#edit'
-  post 'events/destory', to: 'events#destroy'
+  post 'events/destroy', to: 'events#destroy'
   resources :users
   get 'users/new'
 
-  #get 'pages/events'
+	#inventory routes
+  get 'inventory', to: 'inventory#index'
+  post 'inventory/create', to: 'inventory#create'
+	post 'inventory/edit', to: 'inventory#edit'
+	post 'inventory/destroy', to: 'inventory#destroy'
 
-  #get 'pages/about'
   get 'about', to: 'pages#about'
   get 'partners', to: 'pages#partners'
   get 'help', to: 'pages#help'

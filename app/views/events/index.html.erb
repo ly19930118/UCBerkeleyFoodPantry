@@ -73,7 +73,7 @@
             <% end %>
           </td>
           <td>
-            <%= form_tag controller: "events", action: "destory", method: "post" do %>
+            <%= form_tag controller: "events", action: "destroy", method: "post" do %>
               <%= hidden_field_tag(:id, eve.id) %>
               <%= submit_tag "Delete", id: "delete_#{eve.title}", class: "delete_#{eve.title}" %>
             <% end %>

@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   post 'events', to: 'events#index'
   post 'events/edit', to: 'events#edit'
   patch 'events/edit', to: 'events#edit'
-  post 'events/destory', to: 'events#destory'
+  post 'events/destory', to: 'events#destroy'
   resources :users
   get 'users/new'
 

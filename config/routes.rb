@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   get 'sessions/new'
 
+  get 'inventory', to: 'inventory#index'
+  post 'inventory/order', to: 'inventory#order'
   get 'events', to: 'events#index'
   post 'events', to: 'events#index'
   post 'events/edit', to: 'events#edit'

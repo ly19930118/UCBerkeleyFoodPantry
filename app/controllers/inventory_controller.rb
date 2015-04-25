@@ -5,6 +5,11 @@ class InventoryController < ApplicationController
     else
       @is_admin = false
     end
+    if params[:id] == nil
+      @inventory_item = InventoryItem.new
+    else
+      @inventory_item = InventoryItem.find(params[:id])
+    end
     #pull data from doc
     #i.val i.id i.name
     @items = InventoryItem.all
@@ -16,11 +21,24 @@ class InventoryController < ApplicationController
 
   end
 
-  def create
+  def order
     #check if order more than twice
-
+    numItems = 0
+    emailText = ""
     # check if valid value
+    params[:items].each do |item|
+      if item[:checked] == "1"
+        if item.has_key?(:value)
+          numItems = numItems + item[:value]
+        else
+          numItems = numItems + 1
+        end
+        #construct the email string
+        #emailText = item[:]
 
+      end
+
+    end
 
     #send email
 

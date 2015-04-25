@@ -11,3 +11,57 @@
   <% end %>
   <%= submit_tag("Submit") %>
 <% end %>
+
+<% if @is_admin %>
+  <%= form_for @inventory_item, url: {action: "edit"}, html: {class: "nifty_form"} do |f| %>
+    <fieldset>
+      <legend>Inventory Form</legend>
+      <p><%= label_tag(:name, "Food Name: ", class: "field") %>
+      <%= f.text_field :name %></p>
+
+      <p><%= label_tag(:stock, "Amount in Stock: ", class: "field") %>
+      <%= f.text_field :stock %></p>
+      
+      <p><%= label_tag(:max_per_order, "Maximum Quantity for One Order: ", class: "field") %>
+      <%= f.text_field :max_per_order %></p>
+
+      <%= hidden_field_tag(:id, @inventory_item.id) %>
+      <%= f.submit "Submit" %>
+    </fieldset>
+  <% end %>
+
+  <div id="inventory_table">
+    <table id="inventory_container">
+      <thead>
+        <tr class='noborder'>
+          <th>Food Name</th>
+          <th>Amount in Stock</th>
+          <th>Maximum Quantity for One Order</th>
+          <th>Edit</th>
+          <th>Delete</th>
+        </tr>
+      </thead>
+      <% @items.each do |item| %>
+        <tr>
+          <td><%= item.name %></td>
+          <td><%= item.stock %></td>
+          <td><%= item.max_per_order %></td>
+          <td>
+            <%= form_tag controller: "inventory", action: "index", method: "get" do %>
+              <%= hidden_field_tag(:id, item.id) %>
+              <%= submit_tag "Edit", id: "edit_#{item.name}", class: "edit_#{item.name}"%>
+            <% end %>
+          </td>
+          <td>
+            <%= form_tag controller: "inventory", action: "destroy", method: "post" do %>
+              <%= hidden_field_tag(:id, item.id) %>
+              <%= submit_tag "Delete", id: "delete_#{item.title}", class: "delete_#{item.title}" %>
+            <% end %>
+          </td>
+        </tr>
+      <% end %>
+
+
+    </table>
+  </div>  
+<% end %>

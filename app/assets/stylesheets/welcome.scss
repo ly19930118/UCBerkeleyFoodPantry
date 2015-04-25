@@ -2,8 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 .splash-page {
-	background-image: image-url("wheat.JPG");
-	-webkit-background-size: cover;
+    background-color: midnightblue;
 	height: 100%;
 	width: 100%;
     position:absolute;
@@ -12,12 +11,8 @@
     left:0;
     right:0;
 }
-.splash-header {
-	text-align: center;
-	vertical-align: middle;
-	line-height: 300px;
-	color: #003A70;
-	font-size: 5.5em;
-	font-weight: 300;
-	font-family: "Raleway", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+#logo-yellow {
+  opacity: 0.9;
+  margin-top: 5%;
+  margin-left: 5%
 }

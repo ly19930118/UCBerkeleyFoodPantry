@@ -1,10 +1,10 @@
 <%= form_tag({controller: "inventory", action: "create"}, method: "post", class: "nifty_form") do %>
   <% @items.each do |i| %>
-    <%= fields_for "items[#{i[:id]}]" do |ff| %>
+    <%= fields_for "items[#{i.id}]" do |ff| %>
       <%= ff.check_box(:checked) %>
-      <%= ff.label(:checked, i[:name]) %>
-      <% if i[:limit] != 1 %>
-        <%= ff.select :value, options_for_select((1..i[:limit]).step(1).to_a.map{|s| ["#{s}", s]})%>
+      <%= ff.label(:checked, i.name) %>
+      <% if i.max_per_order != 1 %>
+        <%= ff.select :value, options_for_select((1..i.max_per_order).step(1).to_a.map{|s| ["#{s}", s]})%>
       <% end %>
       <br/>
     <% end %>

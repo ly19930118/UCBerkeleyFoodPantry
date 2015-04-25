@@ -2,7 +2,8 @@ class InventoryController < ApplicationController
   def index
     #pull data from doc
     #i.val i.id i.name
-    @items = [{:val => "1", :id => "id1", :name => "name1", :limit => 2}, {:val => "2", :id => "id2", :name => "name2", :limit => 1}]
+    @items = InventoryItem.all
+    #@items = [{:val => "1", :id => "id1", :name => "name1", :limit => 2}, {:val => "2", :id => "id2", :name => "name2", :limit => 1}]
     #@hours = Contact.first
 
 

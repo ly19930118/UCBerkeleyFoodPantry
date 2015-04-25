@@ -1,0 +1,7 @@
+<%= form_tag({controller: "inventory", action: "create"}, method: "post", class: "nifty_form") do %>
+  <% @items.each do |i| %>
+      <%= check_box_tag(i[:id], i[:val]) %>
+      <%= label_tag(i[:id], i[:name]) %>
+  <% end %>
+  <%= submit_tag("Submit") %>
+<% end %>

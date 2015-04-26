@@ -5,3 +5,16 @@
 	margin-left: 10%;
 	margin-right: 10%;
 }
+.trans-logo-background {
+	height: 100vh;
+	background-image: image-url("logo_blue_trans.png");
+	background-size: 599px 699px;
+	background-repeat: no-repeat;
+}
+.container {
+	height: 100%;
+	width: 100%
+}
+#image1, #image2 {
+	width: 70%;
+}

@@ -11,10 +11,8 @@
   margin-left: 5%
 }
 
-#splash-info {
-  position: absolute;
-  right: 350px;
-  top: 200px;
+div[id="splash-info col-xs-6"]{
+  padding-top: 110px;
   color: white;
 }
 

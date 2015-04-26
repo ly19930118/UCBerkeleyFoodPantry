@@ -18,7 +18,6 @@ Rails.application.routes.draw do
 	post 'inventory/destroy', to: 'inventory#destroy'
 
   get 'about', to: 'pages#about'
-  get 'partners', to: 'pages#partners'
   get 'help', to: 'pages#help'
   get 'resources', to: 'pages#resources'
   get 'inventory', to: 'pages#inventory'

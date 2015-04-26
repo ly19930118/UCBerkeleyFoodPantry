@@ -39,6 +39,9 @@ gem 'bcrypt', '3.1.7'
 
 gem 'fullcalendar-rails'
 
+#for security of env vars. do figaro install after bundle install
+gem "figaro"
+
 group :development, :test do
   # Use sqlite3 as the database for Active Record
   gem 'sqlite3'

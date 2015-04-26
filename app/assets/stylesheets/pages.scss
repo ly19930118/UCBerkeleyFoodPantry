@@ -5,16 +5,23 @@
 	margin-left: 10%;
 	margin-right: 10%;
 }
-.trans-logo-background {
-	height: 100vh;
-	background-image: image-url("logo_blue_trans.png");
-	background-size: 599px 699px;
-	background-repeat: no-repeat;
+// .trans-logo-background {
+// 	height: 100vh;
+// 	background-image: image-url("logo_blue_trans.png");
+// 	background-size: 599px 699px;
+// 	background-repeat: no-repeat;
+// }
+.about-us-info {
+	font-size: 12px;
 }
 .container {
 	height: 100%;
 	width: 100%
 }
+.about-page {
+	padding-bottom: 100px;
+}
 #image1, #image2 {
-	width: 70%;
+	width: 100%;
+	padding: 20px
 }

@@ -40,11 +40,11 @@ class InventoryController < ApplicationController
       end
     end
 
-    if not current_user:
+    if not current_user
       flash[:notice] = "You can only have 4 items total"
-    elsif numItems > 4:
+    elsif numItems > 4
       flash[:notice] = "You must log in to checkout"
-    else:
+    else
       flash[:notice] = "Your order has been successfully processed."
     end
 

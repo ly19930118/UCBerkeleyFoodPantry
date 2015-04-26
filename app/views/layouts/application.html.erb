@@ -5,6 +5,8 @@
   <%= stylesheet_link_tag    'application', media: 'all' %>
   <%= javascript_include_tag 'application' %>
   <%= csrf_meta_tags %>
+  <link href='http://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Merriweather' rel='stylesheet' type='text/css'>
 </head>
 <body data-no-turbolink>
 <nav class="navbar navbar-default">
@@ -26,7 +28,6 @@
         <li><a class='menu-item' href="/resources">Resources</a></li>
         <li><a class='menu-item' href="/events">Events</a></li>
         <li><a class='menu-item' href="/inventory">Inventory</a></li>
-        <li><a class='menu-item' href="/partners">Partners</a></li>
         <% if logged_in? %>
             <li><a class='menu-item' href="/login">Logout</a></li>
         <% else %>

@@ -15,8 +15,9 @@ class InventoryController < ApplicationController
     @items = InventoryItem.all
     #@items = [{:val => "1", :id => "id1", :name => "name1", :limit => 2}, {:val => "2", :id => "id2", :name => "name2", :limit => 1}]
     #@hours = Contact.first
-
-
+    if params[:success]
+    	redirect_to "https://www.surveymonkey.com/s/7N395S6"
+    end
 
 
   end
@@ -25,6 +26,7 @@ class InventoryController < ApplicationController
     #check if order more than twice
     numItems = 0
     emailText = ""
+    successful = false
     # check if valid value
     params[:items].each do |key, item|
       if item[:checked] == "1"
@@ -40,20 +42,22 @@ class InventoryController < ApplicationController
       end
     end
 
-    if not current_user:
-      flash[:notice] = "You can only have 4 items total"
-    elsif numItems > 4:
+    if not current_user
       flash[:notice] = "You must log in to checkout"
-    else:
+    elsif numItems > 4
+      flash[:notice] = "You can only have 4 items total"
+    else
       flash[:notice] = "Your order has been successfully processed."
+      successful = true
     end
 
     #send email
     flash[:notice] = "email: " + emailText
     #redirect to survey
-    redirect_to inventory_path
+    redirect_to inventory_path(:success => successful)
 
   end
+
 
   def edit
     new_or_edit

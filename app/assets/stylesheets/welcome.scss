@@ -3,6 +3,7 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 #splash-page {
     background-color: #003A70;
+    padding-bottom: 150px;
 }
 #logo-yellow {
   opacity: 0.9;
@@ -12,8 +13,9 @@
 
 #splash-info {
   position: absolute;
-  right: 20px;
-  top: 50px;
+  right: 350px;
+  top: 200px;
+  color: white;
 }
 
 #logo-blue {

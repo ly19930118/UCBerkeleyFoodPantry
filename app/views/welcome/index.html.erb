@@ -2,9 +2,10 @@
 
     <%= image_tag("logo_yellow.png", :alt => "yellow logo", height: '600', width: '599', id:'logo-yellow') %>
 	<div id="splash-info">
-        <h3>Location: <%= @contact.location %></h3>
+        <h2>Location: </h2>
+        <h3><%= @contact.location %></h3>
         <br>
-        <h3>Hours for Spring 2015</h3>
+        <h2>Hours for Spring 2015</h2>
 	    <ul>
 	        <% @contact.hours_format.each do |day| %>
             <li><%=day%></li>

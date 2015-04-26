@@ -54,7 +54,7 @@ class InventoryController < ApplicationController
     #send email
     flash[:notice] = "email: " + emailText
     #redirect to survey
-    redirect_to inventory_path(@inventory, :success => successful)
+    redirect_to inventory_path(:success => successful)
 
   end
 

@@ -56,7 +56,7 @@
           <td>
             <%= form_tag controller: "inventory", action: "destroy", method: "post" do %>
               <%= hidden_field_tag(:id, item.id) %>
-              <%= submit_tag "Delete", id: "delete_#{item.name}", class: "delete_#{item.title}" %>
+              <%= submit_tag "Delete", id: "delete_#{item.name}", class: "delete_#{item.name}" %>
             <% end %>
           </td>
         </tr>

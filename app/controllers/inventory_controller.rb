@@ -15,8 +15,9 @@ class InventoryController < ApplicationController
     @items = InventoryItem.all
     #@items = [{:val => "1", :id => "id1", :name => "name1", :limit => 2}, {:val => "2", :id => "id2", :name => "name2", :limit => 1}]
     #@hours = Contact.first
-
-
+    if params[:success]
+    	redirect_to "https://www.surveymonkey.com"
+    end
 
 
   end
@@ -41,9 +42,9 @@ class InventoryController < ApplicationController
     end
 
     if not current_user
-      flash[:notice] = "You can only have 4 items total"
-    elsif numItems > 4
       flash[:notice] = "You must log in to checkout"
+    elsif numItems > 4
+      flash[:notice] = "You can only have 4 items total"
     else
       flash[:notice] = "Your order has been successfully processed."
     end
@@ -51,9 +52,10 @@ class InventoryController < ApplicationController
     #send email
     flash[:notice] = "email: " + emailText
     #redirect to survey
-    redirect_to inventory_path
+    redirect_to inventory_path(@inventory, :success => true)
 
   end
+
 
   def edit
     new_or_edit

@@ -38,7 +38,14 @@ class InventoryController < ApplicationController
         emailText = emailText + item[:name] + " x " + numCurrent.to_s + "; \n"
 
       end
+    end
 
+    if not current_user:
+      flash[:notice] = "You can only have 4 items total"
+    elsif numItems > 4:
+      flash[:notice] = "You must log in to checkout"
+    else:
+      flash[:notice] = "Your order has been successfully processed."
     end
 
     #send email

@@ -16,7 +16,7 @@ class InventoryController < ApplicationController
     #@items = [{:val => "1", :id => "id1", :name => "name1", :limit => 2}, {:val => "2", :id => "id2", :name => "name2", :limit => 1}]
     #@hours = Contact.first
     if params[:success]
-    	redirect_to "https://www.surveymonkey.com"
+    	redirect_to "https://www.surveymonkey.com/s/7N395S6"
     end
 
 
@@ -54,7 +54,7 @@ class InventoryController < ApplicationController
     #send email
     flash[:notice] = "email: " + emailText
     #redirect to survey
-    redirect_to inventory_path(@inventory, :success => successful)
+    redirect_to inventory_path(:success => successful)
 
   end
 

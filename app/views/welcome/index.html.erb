@@ -1,13 +1,7 @@
-<div class="splash-page">
+<div id="splash-page">
 
     <%= image_tag("logo_yellow.png", :alt => "yellow logo", height: '600', width: '599', id:'logo-yellow') %>
-	<div class="splash-info">
-        <h3>Contact Us!</h3>
-	
-	    <ul>
-	        <li>Email: <a href="mailto:<%= @contact.email%>">Send Us An Email!</a></li>
-	        <li>Facebook: <a href="<%=@contact.facebook%>">Facebook Link</a></li>
-	    </ul>
+	<div id="splash-info">
         <h3>Location: <%= @contact.location %></h3>
         <br>
         <h3>Hours for Spring 2015</h3>

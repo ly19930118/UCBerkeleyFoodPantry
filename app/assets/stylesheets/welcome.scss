@@ -1,22 +1,15 @@
 // Place all the styles related to the welcome controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-.splash-page {
+.content {
     background-color: #003A70;
-	height: 100%;
-	width: 100%;
-    position:absolute;
-    top:0;
-    bottom:0;
-    left:0;
-    right:0;
 }
 #logo-yellow {
   opacity: 0.9;
   margin-top: 5%;
   margin-left: 5%
 }
-.splash-info {
+#splash-info {
   position: absolute;
   right: 20px;
   top: 50px;

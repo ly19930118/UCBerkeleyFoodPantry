@@ -26,6 +26,7 @@ class InventoryController < ApplicationController
     #check if order more than twice
     numItems = 0
     emailText = ""
+    successful = false
     # check if valid value
     params[:items].each do |key, item|
       if item[:checked] == "1"
@@ -47,12 +48,13 @@ class InventoryController < ApplicationController
       flash[:notice] = "You can only have 4 items total"
     else
       flash[:notice] = "Your order has been successfully processed."
+      successful = true
     end
 
     #send email
     flash[:notice] = "email: " + emailText
     #redirect to survey
-    redirect_to inventory_path(@inventory, :success => true)
+    redirect_to inventory_path(@inventory, :success => successful)
 
   end
 

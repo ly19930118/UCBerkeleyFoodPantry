@@ -15,9 +15,6 @@ class InventoryController < ApplicationController
     @items = InventoryItem.all
     #@items = [{:val => "1", :id => "id1", :name => "name1", :limit => 2}, {:val => "2", :id => "id2", :name => "name2", :limit => 1}]
     #@hours = Contact.first
-    if params[:success]
-    	redirect_to "https://www.surveymonkey.com/s/7N395S6"
-    end
 
 
   end
@@ -56,7 +53,11 @@ class InventoryController < ApplicationController
     end
 
     #redirect to survey
-    redirect_to inventory_path(:success => successful)
+    if successful
+    	redirect_to inventory_survey_path
+    else
+    	redirect_to inventory_path
+    end
 
   end
 

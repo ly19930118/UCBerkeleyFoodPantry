@@ -16,6 +16,7 @@ Rails.application.routes.draw do
   post 'inventory/create', to: 'inventory#create'
 	post 'inventory/edit', to: 'inventory#edit'
 	post 'inventory/destroy', to: 'inventory#destroy'
+	get 'inventory/survey', to: 'inventory#survey'
 
   get 'about', to: 'pages#about'
   get 'help', to: 'pages#help'

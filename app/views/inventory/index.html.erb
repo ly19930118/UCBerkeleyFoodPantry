@@ -1,6 +1,6 @@
 <div id="cover">
 </div>
-<% if true %>
+<% if @is_admin %>
     <div class = "editInventory">
       <%= form_for @inventory_item, url: {action: "edit"}, html: {class: "nifty_form"} do |f| %>
         <fieldset>
@@ -15,7 +15,7 @@
           <%= f.text_field :max_per_order %></p>
 
           <%= hidden_field_tag(:id, @inventory_item.id) %>
-          <%= f.submit "Submit", class: 'btn btn-default add-food' %>
+          <%= f.submit "Add", class: 'btn btn-default add-food' %>
         </fieldset>
       <% end %>
       
@@ -63,10 +63,10 @@
     
     <div class="inventory-info col-xs-6" data-step="1" data-intro="This is the inventory form. Using this form, you can request food from our pantry.">
       <h2 class="inventory-title"> Inventory 
-        <% if true %>
+        <% if @is_admin %>
         <span class="glyphicon glyphicon-edit edit"></span>
         <%end%>
-        <% if true %>
+        <% if @is_admin %>
         <span class="glyphicon glyphicon-question-sign help-admin "></span>
         <% else %>
         <span class="glyphicon glyphicon-question-sign help"></span>

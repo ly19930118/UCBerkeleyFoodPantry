@@ -9,7 +9,7 @@
 }
 .inventory-items {
 	overflow-y: scroll;
-	height: 75vh;
+	height: 100vh;
 	overflow-x: hidden;
 	background-color: rgba(170, 170, 170, 0.2);
 }
@@ -20,7 +20,7 @@
 	padding-top: 10px;
 	float: right;
 	font-size: 14px;
-	margin-right: 20px;
+	margin-right: 75px;
 }
 
 .glyphicon-question-sign:hover {

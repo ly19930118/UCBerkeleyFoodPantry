@@ -11,18 +11,19 @@
 // 	background-size: 599px 699px;
 // 	background-repeat: no-repeat;
 // }
-.about-us-info {
+.about-us-info, .help-us-info, .inventory-info {
 	font-size: 12px;
 }
+
 .container {
 	height: 100%;
 	width: 100%
 }
-.about-page {
+.about-page, .inventory-page {
 	padding-bottom: 100px;
 }
-#image1, #image2 {
-	width: 100%;
+.image {
+	width: 417px;
 	padding: 20px
 }
 

@@ -3,6 +3,13 @@ class User < ActiveRecord::Base
 	has_secure_password
 	validates :password, length: { minimum: 6 }
 
+	@@status = ['student', 'student-parent']
+
+	def self.status
+		@@status
+	end
+
+
     def self.resetOrder
       User.update_all(:orders_this_month => 0)
     end

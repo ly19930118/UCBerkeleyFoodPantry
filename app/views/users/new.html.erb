@@ -15,7 +15,15 @@
         <%= f.label :password_confirmation, "Confirmation" %>
         <%= f.password_field :password_confirmation %>
 
+        <%= f.label :status %>
+        <%= f.select :status, ['student', 'student-parent'] %>
+
+        <%= f.label :dependents %>
+        <%= f.select :dependents, [0, 1, 2, 3, 4, 5] %>
+
         <%= f.submit "Create my account", class: "btn btn-primary" %>
+
+
     <% end %>
   </div>
 </div>

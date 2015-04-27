@@ -1,13 +1,13 @@
 <div id="splash-page">
 
   <div class="row">
-      <div class="col-xs-6">
-        <%= image_tag("logo_blue.png", :alt => "yellow logo", height: '100%', width: '100%', id:'logo-yellow') %>
+      <div class="first-column col-xs-6">
+        <h2>Location: </h2>
+        <h4>Stiles Hall at 2400 Bancroft Way</h4>
+        <div id="map-canvas"></div>
+        <br>
       </div>
-        <div id="splash-info col-xs-6">
-          <h2>Location: </h2>
-          <div id="map-canvas"></div>
-          <br>
+        <div class="splash-info col-xs-6">
           <h2>Hours for Spring 2015</h2>
           <ul>
             <% @contact.hours_format.each do |day| %>
@@ -21,12 +21,13 @@
     </div>
 
 </div>
+
 <script>
 function initialize() {
     var mapCanvas = document.getElementById('map-canvas');
     var mapOptions = {
-        center: new google.maps.LatLng(44.5403, -78.5463),
-        zoom: 8,
+        center: new google.maps.LatLng(37.868469, -122.261213),
+        zoom: 18,
         mapTypeId: google.maps.MapTypeId.ROADMAP
     }
     var map = new google.maps.Map(mapCanvas, mapOptions)

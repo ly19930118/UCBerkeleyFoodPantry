@@ -27,6 +27,7 @@ class InventoryController < ApplicationController
     numItems = 0
     emailText = ""
     successful = false
+    itemList = []
     # check if valid value
     params[:items].each do |key, item|
       if item[:checked] == "1"
@@ -37,11 +38,13 @@ class InventoryController < ApplicationController
         end
         numItems = numItems + numCurrent
         #construct the email string
-        emailText = emailText + item[:name] + " x " + numCurrent.to_s + "; \n"
-
+        itemList.push({:name => item[:name], :amount => numCurrent})
+        #emailText = emailText + item[:name] + " x " + numCurrent.to_s + "; \n"
       end
     end
 
+
+    #@TODO check max_order_this_month
     if not current_user
       flash[:notice] = "You must log in to checkout"
     elsif numItems > 4
@@ -49,6 +52,7 @@ class InventoryController < ApplicationController
     else
       flash[:notice] = "Your order has been successfully processed."
       successful = true
+      FoodMailer.send_order(current_user, itemList)
     end
 
     #send email

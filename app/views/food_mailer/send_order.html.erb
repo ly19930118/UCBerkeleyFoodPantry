@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hi UCB FoodPantry Admin</h1>
+    <p>
+      User <%= @user.userid %> has ordered:
+      <br/>
+      <% @itemList.each do |item| %>
+        <%= item[:name] %> x <%= item[:amount] %>
+        <br/>
+      <% end %>
+    </p>
+  </body>
+</html>

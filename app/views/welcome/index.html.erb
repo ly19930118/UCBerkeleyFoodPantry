@@ -2,11 +2,11 @@
 
   <div class="row">
       <div class="col-xs-6">
-        <%= image_tag("logo_yellow.png", :alt => "yellow logo", height: '100%', width: '100%', id:'logo-yellow') %>
+        <%= image_tag("logo_blue.png", :alt => "yellow logo", height: '100%', width: '100%', id:'logo-yellow') %>
       </div>
         <div id="splash-info col-xs-6">
           <h2>Location: </h2>
-          <h3><%= @contact.location %></h3>
+          <div id="map-canvas"></div>
           <br>
           <h2>Hours for Spring 2015</h2>
           <ul>

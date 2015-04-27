@@ -10,8 +10,15 @@
   margin-left: 5%
 }
 
-div[id="splash-info col-xs-6"]{
-  padding-top: 130px;
+div[class="splash-info col-xs-6"]{
+  padding-top: 70px;
+  padding-left: 23px;
+  color: darkgoldenrod;
+}
+
+div[class="first-column col-xs-6"]{
+  padding-top: 70px;
+  padding-left: 280px;
   color: darkgoldenrod;
 }
 
@@ -22,6 +29,6 @@ div[id="splash-info col-xs-6"]{
 }
 
 #map-canvas {
-  width: 500px;
-  height: 400px;
+  width: 400px;
+  height: 300px;
 }

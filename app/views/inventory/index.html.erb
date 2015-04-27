@@ -1,17 +1,29 @@
-<div class="addpadding">
-    <%= form_tag({controller: "inventory", action: "order"}, method: "post", class: "nifty_form") do %>
-      <% @items.each do |i| %>
-        <%= fields_for "items[#{i.id}]" do |ff| %>
-          <%= ff.check_box(:checked) %>
-          <%= ff.label(:checked, i.name) %>
-          <%= ff.hidden_field(:name, :value => i.name) %>
-          <% if i.max_per_order != 1 %>
-            <%= ff.select :value, options_for_select((1..i.max_per_order).step(1).to_a.map{|s| ["#{s}", s]})%>
-          <% end %>
-          <br/>
+<div class="trans-logo-background inventory-page">
+  <div class="row">
+    
+    <div class="about-images col-xs-6">
+      <%= image_tag("food3.jpg", class:'image') %>
+      <%= image_tag("food1.jpg", class:'image') %>
+    </div>
+    
+    <div class="inventory-info col-xs-6" data-step="1" data-intro="This is the inventory form. Using this form, you can request food from our pantry.">
+      <h2 class="inventory-title"> Inventory <span class="glyphicon glyphicon-question-sign help"></span></h2>
+      <%= form_tag({controller: "inventory", action: "order"}, method: "post", class: "nifty_form inventory_form") do %>
+        <div class="inventory-items">
+        <% @items.each do |i| %>
+          <div class="inventory-item">
+            <%= fields_for "items[#{i.id}]" do |ff| %>
+              <%= ff.check_box(:checked, class:'inventory-check') %>
+              <%= ff.label(:checked, i.name, class:'inventory-label') %>
+              <%= ff.hidden_field(:name, :value => i.name, class:'inventory-hidden-field') %>
+              <% if i.max_per_order != 1 %>
+                <%= ff.select :value, options_for_select((1..i.max_per_order).step(1).to_a.map{|s| ["#{s}", s]})%>
+            <% end %>
+          </div>
         <% end %>
       <% end %>
-      <%= submit_tag("Submit") %>
+      </div>
+      <%= submit_tag("Submit Request", class:'inventory-submit btn btn-default') %>
     <% end %>
 
     <% if @is_admin %>
@@ -62,9 +74,53 @@
               </td>
             </tr>
           <% end %>
-
-
         </table>
       </div>
     <% end %>
+    
+    </div>
+  </div>
+
 </div>
+
+<script>
+$( document ).ready(function() {
+  $('.help').on( 'click', function(){
+    
+    introJs().start();
+    $(".inventory-items").animate({
+      scrollTop: 0
+    }, 600);
+    
+  } );
+  introJs().setOption("scrollToElement", true);
+  
+  var item = $('.inventory-item')[0];
+  var itemCheck = $('.inventory-check')[0]
+  var maxItem = $('.inventory-item')[3];
+  var maxItemCheck = $('.inventory-check')[3];
+
+  $(item).attr('data-step', 2);
+  $(item).attr('data-intro', 'This is one of the many availiable food products we have at our pantry.')
+  
+  $(itemCheck).attr('data-step', 3);
+  $(itemCheck).attr('data-intro', 'Check the checkbox to request this item.')
+
+  $(maxItem).attr('data-step', 4);
+  $(maxItem).attr('data-intro', 'Here is another availiable food product at our pantry.')
+  
+  $('#items_4_value').attr('data-step', 5);
+  $('#items_4_value').attr('data-intro', 'Select how much of the product you want.')
+
+  $(maxItemCheck).attr('data-step', 6);
+  $(maxItemCheck).attr('data-intro', 'Check the checkbox to request this item.')
+
+  $('.inventory-submit').attr('data-step', 7);
+  $('.inventory-submit').attr('data-intro', 'Click to submit your request. You will be redirected to a survey.')
+
+
+
+
+
+});
+</script>

@@ -1,0 +1,28 @@
+.inventory-item > input {
+	max-width: 40%;
+}
+.inventory-item {
+	padding: 10px;
+}
+.inventory_form {
+	padding: 0;
+}
+.inventory-items {
+	overflow-y: scroll;
+	height: 75vh;
+	overflow-x: hidden;
+	background-color: rgba(170, 170, 170, 0.2);
+}
+.inventory-submit {
+	margin-top: 10px;
+}
+.glyphicon-question-sign {
+	padding-top: 10px;
+	float: right;
+	font-size: 14px;
+	margin-right: 20px;
+}
+
+.glyphicon-question-sign:hover {
+	opacity: 0.5;
+}

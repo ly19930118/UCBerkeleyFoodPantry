@@ -11,7 +11,7 @@
           <h2>Hours for Spring 2015</h2>
           <ul>
             <% @contact.hours_format.each do |day| %>
-                <span><%= day%></br></span>
+                <h4><%= day%></h4>
             <%end %>
           </ul>
           <% if @is_admin %>

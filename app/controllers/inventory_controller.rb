@@ -52,11 +52,9 @@ class InventoryController < ApplicationController
     else
       flash[:notice] = "Your order has been successfully processed."
       successful = true
-      FoodMailer.send_order(current_user, itemList)
+      FoodMailer.send_order(current_user, itemList).deliver_now
     end
 
-    #send email
-    flash[:notice] = "email: " + emailText
     #redirect to survey
     redirect_to inventory_path(:success => successful)
 

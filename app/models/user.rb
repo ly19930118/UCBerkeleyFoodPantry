@@ -3,4 +3,11 @@ class User < ActiveRecord::Base
 	has_secure_password
 	validates :password, length: { minimum: 6 }
 
+    def self.resetOrder
+      User.update_all(:orders_this_month => 0)
+    end
+
+    def increaseOrder
+      self.increment!(:orders_this_month)
+    end
 end

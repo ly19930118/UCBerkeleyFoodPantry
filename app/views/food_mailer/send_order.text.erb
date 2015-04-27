@@ -1,0 +1,6 @@
+Hi UCB FoodPantry Admin,
+
+User <%= @user.userid %> has ordered:
+<% @itemList.each do |item| %>
+    <%= item[:name] %> x <%= item[:amount] %>
+<% end %>

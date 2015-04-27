@@ -16,13 +16,77 @@
 .inventory-submit {
 	margin-top: 10px;
 }
-.glyphicon-question-sign {
+.help-admin {
+	padding-top: 10px;
+	float: right;
+	font-size: 14px;
+	margin-right: 10px;
+}
+.help {
 	padding-top: 10px;
 	float: right;
 	font-size: 14px;
 	margin-right: 75px;
 }
+.edit {
+	padding-top: 10px;
+	float: right;
+	font-size: 14px;
+	margin-right: 75px;
+}
+.cancel {
+	float: right;
+	font-size: 14px;
+	padding-top: 10px;
+}
 
-.glyphicon-question-sign:hover {
+.glyphicon-question-sign:hover, .edit:hover, .cancel:hover {
 	opacity: 0.5;
+}
+
+/* Styles for popup for edit */
+legend {
+	width: 80%;
+}
+.editInventory {
+	background-color: white;
+	display: none;
+	position: absolute;
+	height: 500px;
+	font-family: Montserrat;
+	z-index: 6;
+	border-radius: 10px;
+	border:5px solid #cccccc;
+	padding-bottom: 20px;
+	width: 600px;
+	margin-left: calc((100% - 600px)/2);
+	margin-top: 30px;
+}
+#inventory_table {
+	overflow-y: scroll;
+	height: 100%;
+	height: 150px;
+	border: 1px solid;
+	margin: 10px;
+	padding: 10px;
+}
+
+#cover {
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background: rgba(0,0,0,0.6);
+	z-index: 5;
+	width: 100%;
+	height: 100%;
+}
+.edit-food {
+	margin-right: 5px;
+}
+.delete-food {
+	background-color: rgba(248, 144, 150, 0.9) !important;
+}
+.add-food {
+	background-color: rgba(156, 238, 160, 0.9) !important;
 }

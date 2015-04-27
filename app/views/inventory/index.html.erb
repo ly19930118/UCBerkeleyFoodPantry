@@ -1,3 +1,58 @@
+<div id="cover">
+</div>
+<% if true %>
+    <div class = "editInventory">
+      <%= form_for @inventory_item, url: {action: "edit"}, html: {class: "nifty_form"} do |f| %>
+        <fieldset>
+          <legend>Edit Inventory<span class=" cancel glyphicon glyphicon-remove"></span></legend>
+          <p><%= label_tag(:name, "Food Name: ", class: "field") %>
+          <%= f.text_field :name %></p>
+
+          <p><%= label_tag(:stock, "Amount in Stock: ", class: "field") %>
+          <%= f.text_field :stock %></p>
+
+          <p><%= label_tag(:max_per_order, "Maximum Quantity for One Order: ", class: "field") %>
+          <%= f.text_field :max_per_order %></p>
+
+          <%= hidden_field_tag(:id, @inventory_item.id) %>
+          <%= f.submit "Submit", class: 'btn btn-default add-food' %>
+        </fieldset>
+      <% end %>
+      
+        <div id="inventory_table">
+          <table id="inventory_container">
+            <thead>
+              <tr class='noborder'>
+                <th>Food Name</th>
+                <th>Amount in Stock</th>
+                <th>Maximum Quantity for One Order</th>
+                <th>Edit</th>
+                <th>Delete</th>
+              </tr>
+            </thead>
+            <% @items.each do |item| %>
+              <tr>
+                <td><%= item.name %></td>
+                <td><%= item.stock %></td>
+                <td><%= item.max_per_order %></td>
+                <td>
+                  <%= form_tag controller: "inventory", action: "index", method: "get" do %>
+                    <%= hidden_field_tag(:id, item.id) %>
+                    <%= submit_tag "Edit", id: "edit_#{item.name}", class: "edit_#{item.name} btn btn-default edit-food"%>
+                  <% end %>
+                </td>
+                <td>
+                  <%= form_tag controller: "inventory", action: "destroy", method: "post" do %>
+                    <%= hidden_field_tag(:id, item.id) %>
+                    <%= submit_tag "Delete", id: "delete_#{item.name}", class: "delete_#{item.name} btn btn-default delete-food" %>
+                  <% end %>
+                </td>
+              </tr>
+            <% end %>
+          </table>
+        </div>
+    </div>
+  <% end %>
 <div class="trans-logo-background inventory-page">
   <div class="row">
     
@@ -7,7 +62,16 @@
     </div>
     
     <div class="inventory-info col-xs-6" data-step="1" data-intro="This is the inventory form. Using this form, you can request food from our pantry.">
-      <h2 class="inventory-title"> Inventory <span class="glyphicon glyphicon-question-sign help"></span></h2>
+      <h2 class="inventory-title"> Inventory 
+        <% if true %>
+        <span class="glyphicon glyphicon-edit edit"></span>
+        <%end%>
+        <% if true %>
+        <span class="glyphicon glyphicon-question-sign help-admin "></span>
+        <% else %>
+        <span class="glyphicon glyphicon-question-sign help"></span>
+        <%end%>
+      </h2>
       <%= form_tag({controller: "inventory", action: "order"}, method: "post", class: "nifty_form inventory_form") do %>
         <div class="inventory-items">
         <% @items.each do |i| %>
@@ -25,59 +89,6 @@
       </div>
       <%= submit_tag("Submit Request", class:'inventory-submit btn btn-default') %>
     <% end %>
-
-    <% if @is_admin %>
-      <%= form_for @inventory_item, url: {action: "edit"}, html: {class: "nifty_form"} do |f| %>
-        <fieldset>
-          <legend>Inventory Form</legend>
-          <p><%= label_tag(:name, "Food Name: ", class: "field") %>
-          <%= f.text_field :name %></p>
-
-          <p><%= label_tag(:stock, "Amount in Stock: ", class: "field") %>
-          <%= f.text_field :stock %></p>
-
-          <p><%= label_tag(:max_per_order, "Maximum Quantity for One Order: ", class: "field") %>
-          <%= f.text_field :max_per_order %></p>
-
-          <%= hidden_field_tag(:id, @inventory_item.id) %>
-          <%= f.submit "Submit" %>
-        </fieldset>
-      <% end %>
-
-      <div id="inventory_table">
-        <table id="inventory_container">
-          <thead>
-            <tr class='noborder'>
-              <th>Food Name</th>
-              <th>Amount in Stock</th>
-              <th>Maximum Quantity for One Order</th>
-              <th>Edit</th>
-              <th>Delete</th>
-            </tr>
-          </thead>
-          <% @items.each do |item| %>
-            <tr>
-              <td><%= item.name %></td>
-              <td><%= item.stock %></td>
-              <td><%= item.max_per_order %></td>
-              <td>
-                <%= form_tag controller: "inventory", action: "index", method: "get" do %>
-                  <%= hidden_field_tag(:id, item.id) %>
-                  <%= submit_tag "Edit", id: "edit_#{item.name}", class: "edit_#{item.name}"%>
-                <% end %>
-              </td>
-              <td>
-                <%= form_tag controller: "inventory", action: "destroy", method: "post" do %>
-                  <%= hidden_field_tag(:id, item.id) %>
-                  <%= submit_tag "Delete", id: "delete_#{item.name}", class: "delete_#{item.name}" %>
-                <% end %>
-              </td>
-            </tr>
-          <% end %>
-        </table>
-      </div>
-    <% end %>
-    
     </div>
   </div>
 
@@ -91,6 +102,29 @@ $( document ).ready(function() {
     $(".inventory-items").animate({
       scrollTop: 0
     }, 600);
+    
+  } );
+
+  $('.help-admin').on( 'click', function(){
+    
+    introJs().start();
+    $(".inventory-items").animate({
+      scrollTop: 0
+    }, 600);
+    
+  } );
+
+  $('.edit').on( 'click', function(){
+    
+    $('#cover').show();
+    $('.editInventory').show();
+    
+  } );
+
+  $('.cancel').on( 'click', function(){
+    
+    $('#cover').hide();
+    $('.editInventory').hide();
     
   } );
   introJs().setOption("scrollToElement", true);

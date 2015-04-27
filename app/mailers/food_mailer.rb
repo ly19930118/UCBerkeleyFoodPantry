@@ -4,5 +4,6 @@ class FoodMailer < ApplicationMailer
     @user = user
     @itemList = itemList
     mail(to: "lgy22106@gmail.com", subject: 'New Order')
+    #ucberkeleyfoodpantry@gmail.com
   end
 end

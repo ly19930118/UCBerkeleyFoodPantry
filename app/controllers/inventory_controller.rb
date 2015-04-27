@@ -34,9 +34,7 @@ class InventoryController < ApplicationController
           numCurrent = 1
         end
         numItems = numItems + numCurrent
-        #construct the email string
         itemList.push({:name => item[:name], :amount => numCurrent})
-        #emailText = emailText + item[:name] + " x " + numCurrent.to_s + "; \n"
       end
     end
 
@@ -49,6 +47,7 @@ class InventoryController < ApplicationController
     else
       flash[:notice] = "Your order has been successfully processed."
       successful = true
+      #current_user.increaseOrder
       FoodMailer.send_order(current_user, itemList).deliver_now
     end
 

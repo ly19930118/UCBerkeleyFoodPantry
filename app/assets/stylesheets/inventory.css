@@ -90,3 +90,9 @@ legend {
 .add-food {
 	background-color: rgba(156, 238, 160, 0.9) !important;
 }
+
+.alignSurvey{
+    margin-top: 40px;
+    margin-left: 120px;
+    margin-right: 120px;
+}

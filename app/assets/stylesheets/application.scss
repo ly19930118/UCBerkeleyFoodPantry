@@ -12,7 +12,9 @@
  *
  *= require_tree .
  *= require_self
- *= require fullcalendar
+ *= require fullcalendar.min
+ *= require fullcalendar.print
+ *= require jquery-ui.min
  */
 
 @import "bootstrap-sprockets";

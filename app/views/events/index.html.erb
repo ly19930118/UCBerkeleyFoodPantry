@@ -1,10 +1,13 @@
 
+<div class="alignCalendar">
+  <div id='calendar'></div>
+</div>
 
-<div id='calendar'></div>
 <%= javascript_tag do %>
     $(document).ready(function() {
 
         // page is now ready, initialize the calendar...
+
 
         $('#calendar').fullCalendar({
             header: {
@@ -15,6 +18,7 @@
             defaultView: 'month'
 
         });
+
         <% @events.each do |eve| %>
           var myEvent = {
             title:"<%= eve.title %>",

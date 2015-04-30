@@ -7,7 +7,7 @@ Feature: Admins can properly edit Inventory page
 	Background: The new tabs template has been set up
 
 	Given the following inventory items exists:
-	  | item               | quantity          | maximum  |
+	  | name               | quantity          | maximum  |
 	  | granola            | 10                | 2        |
 	  | cereal             | 20                | 1        |
   	| cookies            | 8                 | 2        |

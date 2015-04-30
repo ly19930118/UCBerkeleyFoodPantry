@@ -1,29 +1,42 @@
 <% provide(:title, 'Sign up') %>
-<h1>Sign up</h1>
 
-<div class="row">
-  <div class="col-md-6 col-md-offset-3">
-    <%= form_for(@user) do |f| %>
-        <%= render 'shared/error_messages' %>
+<div class="alignSignUp">
+    <h1 class="signupage">Sign up</h1>
+  <br />
+    <div class="row">
+      <div class="col-md-6 col-md-offset-3">
+        <%= form_for(@user) do |f| %>
+            <%= render 'shared/error_messages' %>
 
-        <%= f.label :userid %>
-        <%= f.text_field :userid %>
+            <%= f.label :userid %>
+            <br />
+            <%= f.text_field :userid, :size=>"50"%>
+            <br />
+            <br />
+            <%= f.label :password %>
+            <br />
+            <%= f.password_field :password, :size=>"50" %>
+            <br />
+            <br />
+            <%= f.label :password_confirmation, "Confirmation" %>
+            <br />
+            <%= f.password_field :password_confirmation, :size=>"50" %>
+            <br />
+            <br />
+            <%= f.label :status %>
+            <br />
+            <%= f.select :status, ['student', 'student-parent'] %>
+            <br />
+            <br />
+            <%= f.label :dependents %>
+            <br />
+            <%= f.select :dependents, [0, 1, 2, 3, 4, 5]%>
+            <br />
+            <br />
+            <%= f.submit "Create my account", class: "btn btn-primary" %>
 
-        <%= f.label :password %>
-        <%= f.password_field :password %>
 
-        <%= f.label :password_confirmation, "Confirmation" %>
-        <%= f.password_field :password_confirmation %>
-
-        <%= f.label :status %>
-        <%= f.select :status, ['student', 'student-parent'] %>
-
-        <%= f.label :dependents %>
-        <%= f.select :dependents, [0, 1, 2, 3, 4, 5] %>
-
-        <%= f.submit "Create my account", class: "btn btn-primary" %>
-
-
-    <% end %>
-  </div>
+        <% end %>
+      </div>
+    </div>
 </div>

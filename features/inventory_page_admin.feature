@@ -12,7 +12,7 @@ Feature: Admins can properly edit Inventory page
 	  | cereal             | 20                | 1        |
   	| cookies            | 8                 | 2        |
 
-  And the following users exists:
+  And the following admin users exists:
     | userid             | orders_this_month | password | admin |
     | cheezit            | 0                 | pass123  | true  |
 

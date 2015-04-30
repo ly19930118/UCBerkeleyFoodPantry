@@ -13,10 +13,10 @@ Feature: Inventory page is properly defined
     | cookies            | 8                 | 2        |
     | carrots            | 1                 | 2        |
 
-  And the following users exists:
-    | userid             | orders_this_month | password | admin |
-    | cheezit            | 0                 | pass123  | false |
-    | greedy             | 2                 | pass321  | false |
+  And the following non admin users exists:
+    | userid             | orders_this_month | password |
+    | cheezit            | 0                 | pass123  |
+    | greedy             | 2                 | pass321  |
 
   And I am on the UCBerkeleyFoodPantry home page
 

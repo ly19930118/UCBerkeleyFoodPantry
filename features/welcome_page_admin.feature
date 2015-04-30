@@ -6,7 +6,7 @@ Feature: admins should have the ability to edit contact information
 
 Background: The new tabs template has been set up
 
-  Given the following users exists:
+  Given the following admin users exists:
     | userid             | orders_this_month | password |
     | cheezit            | 0                 | pass123  |
 
@@ -26,7 +26,4 @@ Background: The new tabs template has been set up
     And I fill in "Location:" with "new location"
     And I fill in "Hours:" with "new hours"
     And I click the "Update Contact Info" button
-    Then I should see the page with link "Send Us An Email!" to "mailto:new email"
-    And I should see the page with link "Facebook Link" to "new facebook"
-    And I should see "new location"
     And I should see "new hours"

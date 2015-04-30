@@ -6,9 +6,9 @@ I want to be able to login to my account
 
 Background: I have already created an account
 
-  Given the following users exists:
+  Given the following non admin users exists:
 
-  | userid             | orders_this_month | password |
+  | userid            | orders_this_month | password |
   | cheezit           | 0                 | pass123  |
 
     And I am on the login page

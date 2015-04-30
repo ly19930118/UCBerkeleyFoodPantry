@@ -8,7 +8,7 @@ Feature: Ability to create account as a user
 
   Given I am on the UCBerkeleyFoodPantry Login page
 
-    And the following user exists:
+    And the following non admin users exists:
       | userid                  | orders_this_month | password |
       | takenUser               | 0                 | pass123  |
 

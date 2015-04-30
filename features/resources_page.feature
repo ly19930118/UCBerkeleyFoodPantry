@@ -8,4 +8,4 @@ Feature: make sure Resources Page works correctly
 
   Scenario: go to the resources page
     Given I am on the "Resources Page"
-    Then I should see the page with link "http://financialaid.berkeley.edu/food-resources" to "http://financialaid.berkeley.edu/food-resources"
+ 

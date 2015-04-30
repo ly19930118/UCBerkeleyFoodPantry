@@ -6,11 +6,9 @@ Feature: admins should have the ability to edit events
 
 Background: The new tabs template has been set up
   Given I am on the UCBerkeleyFoodPantry Login page
-  Given the following users exists:
+  Given the following admin users exists:
     | userid             | orders_this_month | password |
     | cheezit            | 0                 | pass123  |
-
-    
 
   Scenario: as an admin, be able to see and create events
 

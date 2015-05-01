@@ -3,6 +3,11 @@ Rails.application.routes.draw do
 
   get 'inventory', to: 'inventory#index'
   post 'inventory/order', to: 'inventory#order'
+
+  post 'inventory', to: 'inventory#index'
+  patch 'inventory/edit', to: 'inventory#edit'
+  post 'inventory/edit', to: 'inventory#edit'
+  post 'inventory/destory', to: 'inventory#destroy'
   get 'events', to: 'events#index'
   post 'events', to: 'events#index'
   post 'events/edit', to: 'events#edit'

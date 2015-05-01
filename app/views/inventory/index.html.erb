@@ -15,7 +15,7 @@
           <%= f.text_field :max_per_order %></p>
 
           <%= hidden_field_tag(:id, @inventory_item.id) %>
-          <%= f.submit "Add", class: 'btn btn-default add-food' %>
+          <%= f.submit "Submit", class: 'btn btn-default add-food' %>
         </fieldset>
       <% end %>
       
@@ -127,7 +127,7 @@ $( document ).ready(function() {
     $('#cover').hide();
     $('.editInventory').hide();
     
-  } );
+  });
   introJs().setOption("scrollToElement", true);
   
   var item = $('.inventory-item')[0];
@@ -153,7 +153,9 @@ $( document ).ready(function() {
   $('.inventory-submit').attr('data-step', 7);
   $('.inventory-submit').attr('data-intro', 'Click to submit your request. You will be redirected to a survey.')
 
-
+  <% if @is_admin and @display_edit %>
+    $('.edit').trigger("click");
+  <% end %>
 
 
 

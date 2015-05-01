@@ -7,8 +7,10 @@ class InventoryController < ApplicationController
     end
     if params[:id] == nil
       @inventory_item = InventoryItem.new
+      @display_edit = false
     else
       @inventory_item = InventoryItem.find(params[:id])
+      @display_edit = true
     end
     #pull data from doc
     #i.val i.id i.name

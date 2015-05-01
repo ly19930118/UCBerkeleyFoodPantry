@@ -32,3 +32,35 @@ fieldset p {
 .nifty_form {
     padding: 30px;
 }
+
+.event-edit-panel {
+    background-color: white;
+    display: none;
+    position: absolute;
+    height: 500px;
+    font-family: Montserrat;
+    z-index: 6;
+    border-radius: 10px;
+    border:5px solid #cccccc;
+    padding-bottom: 20px;
+    width: 600px;
+    margin-left: calc((100% - 600px)/2);
+    margin-top: 30px;
+}
+.submit-event {
+    background-color: rgba(156, 238, 160, 0.9) !important;
+}
+.edit-event {
+    margin-right: 5px;
+}
+.delete-event {
+    background-color: rgba(248, 144, 150, 0.9) !important;
+}
+#events_table {
+    overflow-y: scroll;
+    height: 100%;
+    height: 150px;
+    border: 1px solid;
+    margin: 10px;
+    padding: 10px;
+}

@@ -19,6 +19,7 @@ module NavigationHelpers
 		  when /^the "Events Page"/ then '/events'
 		  when /^the "Help Page"/ then '/help'
 		  when /^the "Partners Page"/ then '/partners'
+      when /^the "Survey Page"/ then '/inventory/survey'
       when /^the login page/ then '/login'
      when /^the "Edit Contact Page"/ then '/welcome/edit'
 	  end

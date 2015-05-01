@@ -72,6 +72,10 @@ When /^I fill out the form with the following attributes:$/ do |table|
   end
 end
 
+When /^(?:|I )check "([^"]*)"$/ do |field|
+  check(field)
+end
+
 When /^I click the "(.*?)" button$/ do |button|
   click_button button
 end

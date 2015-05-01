@@ -77,7 +77,8 @@
         <% @items.each do |i| %>
           <div class="inventory-item">
             <%= fields_for "items[#{i.id}]" do |ff| %>
-              <%= ff.check_box(:checked, class:'inventory-check') %>
+              
+              <%= ff.check_box(:checked, class:'inventory-check', id:i.name) %>
               <%= ff.label(:checked, i.name, class:'inventory-label') %>
               <%= ff.hidden_field(:name, :value => i.name, class:'inventory-hidden-field') %>
               <% if i.max_per_order != 1 %>

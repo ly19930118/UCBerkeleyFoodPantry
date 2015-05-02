@@ -75,7 +75,7 @@ RSpec.describe EventsController, type: :controller do
     it "delete the existing object" do
       e1 = Event.create!(:title => "abc", :start_date => DateTime.now, :end_date => DateTime.now, :description => "hello")
 
-      post :destory, :id => e1.id
+      post :destroy, :id => e1.id
 
       expect{Event.find(e1.id)}.to raise_exception(ActiveRecord::RecordNotFound)
     end
@@ -83,7 +83,7 @@ RSpec.describe EventsController, type: :controller do
     it "redirect to events page" do
       e1 = Event.create!(:title => "abc", :start_date => DateTime.now, :end_date => DateTime.now, :description => "hello")
 
-      post :destory, :id => e1.id
+      post :destroy, :id => e1.id
 
       expect(response).to redirect_to events_path
 

@@ -26,7 +26,7 @@ class InventoryController < ApplicationController
     numItems = 0
     emailText = ""
     successful = false
-    itemList = []
+    @itemList = []
     # check if valid value
     params[:items].each do |key, item|
       if item[:checked] == "1"
@@ -36,7 +36,7 @@ class InventoryController < ApplicationController
           numCurrent = 1
         end
         numItems = numItems + numCurrent
-        itemList.push({:name => item[:name], :amount => numCurrent})
+        @itemList.push({:name => item[:name], :amount => numCurrent})
       end
     end
 

@@ -12,6 +12,11 @@ Feature: Inventory page is properly defined
     | cereal             | 20                | 1        |
     | cookies            | 8                 | 2        |
     | carrots            | 1                 | 2        |
+    | hello              | 1                 | 2        |
+    | yoyomaa            | 1                 | 2        |
+    | yohihih            | 1                 | 2        |
+    | lolllll            | 1                 | 2        |
+    | yoooooo            | 1                 | 2        |
 
   And the following non admin users exists:
     | userid             | orders_this_month | password |
@@ -28,59 +33,38 @@ Feature: Inventory page is properly defined
     And I should see "cookies"
     
   Scenario: set how many food items you want and submit the form successfully
-  	Given I am logged in as user "cheezit"
-  	And I am on the Inventory Page
-    When I check "cookies"
-  	And I check "cereal"
-  	And I check "granola"
+  	And I am on the login page
+
+    When I fill out the form with the following attributes:
+      | session_userid     | cheezit |
+      | session_password   | pass123 |
+    And I click the "Log in" button
+    Then I should be on the UCBerkeleyFoodPantry home page
+    When I follow "Inventory"
+    When I check "items_cookies_checked"
+  	And I check "items_cereal_checked"
+  	And I check "items_granola_checked"
   	And I click the "Submit Request" button
     Then I should be on the "Survey Page"
-  	And I should see "Your order was processed successfully! Thank you!"
+  	And I should see "Your order was processed successfully!"
 
-  Scenario: after form submit quantity for foods update correctly
-    Given I am logged in as user "cheezit"
-    And I am on the Inventory Page
-    When I fill in "cookies_box" with "2"
-    And I fill in "granola_box" with "1"
-    And I click the "Submit Request" button
-    Then I should be on the UCBerkeleyFoodPantry home page
-    And I should see "Your order was processed successfully! Thank you!"
-    And I follow "Inventory"
-    Then I should see "cookies, quantity: 6"
-    And I should see "granola, quantity: 9"
-  	
-  Scenario: accidentally filled in textbox with invalid entry should get error message
-  	Given I am logged in as user "cheezit"
-  	And I am on the Inventory Page
-  	When I fill in "cookies_box" with "a"
-  	And I click the "Submit Request" button
-  	Then I should be on the Inventory Page
-  	And I should see "Invalid entry! Check that you only put in numbers!"
-  
   Scenario: try to order more than maximum number of a food item
-  	Given I am logged in as user "cheezit"
-  	And I am on the Inventory Page
-  	When I fill in "cookies_box" with "8"
-  	And I click the "Submit Request" button
-  	Then I should be on the Inventory Page
-  	And I should see "Can't order more than the maximum number of the food"
+    And I am on the login page
 
-  Scenario: try to order more than current quantity
-    Given I am logged in as user "cheezit"
-    And I am on the Inventory Page
-    When I fill in "carrots_box" with "2"
+    When I fill out the form with the following attributes:
+      | session_userid     | cheezit |
+      | session_password   | pass123 |
+    And I click the "Log in" button
+    Then I should be on the UCBerkeleyFoodPantry home page
+    When I follow "Inventory"
+
+    When I check "items_carrots_checked"
+    When I check "items_hello_checked"
+    When I check "items_yoyomaa_checked"
+    When I check "items_yoooooo_checked"
+    When I check "items_cookies_checked"
+    When I check "items_cereal_checked"
+
     And I click the "Submit Request" button
-    Then I should see "Sorry, there aren't that many in stock!"
-  	
-  Scenario: if you ordered twice in one month already, can't order more
-  	Given I am logged in as user "greedy"
-  	And I am on the Inventory Page
-  	When I fill in "cookies_box" with "1"
-  	And I click the "Submit Request" button
-  	Then I should be on the UCBerkeleyFoodPantry home page
-  	And I should see "Sorry! You can only order twice a month!"
-  
-
-  
-  
+    And I should see "You can only have 4 items total"
 

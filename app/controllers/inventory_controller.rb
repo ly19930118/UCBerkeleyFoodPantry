@@ -50,7 +50,7 @@ class InventoryController < ApplicationController
       flash[:notice] = "Your order has been successfully processed."
       successful = true
       #current_user.increaseOrder
-      FoodMailer.send_order(current_user, itemList).deliver_now
+      FoodMailer.send_order(current_user, @itemList).deliver_now
     end
 
     #redirect to survey

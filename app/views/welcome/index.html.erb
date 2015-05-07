@@ -14,7 +14,7 @@
                 <h4><%= day%></h4>
             <%end %>
           </ul>
-          <% if true %>
+          <% if @is_admin %>
               <%= button_to 'Edit Contact Info', welcome_edit_path, class: "btn btn-primary edit-contact" %>
           <% end %>
         </div>
